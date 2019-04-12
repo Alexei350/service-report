@@ -4,4 +4,6 @@
   RewriteRule ^/?$ /index.php [NC,L]
   RewriteRule ^os/?$ /os.php [NC,L]
   RewriteRule ^login/?$ /login.php [NC,L]
+  RewriteRule ^relatorios/?$ /relatorios.php [NC,L]
+  RewriteRule ^register/?$ /register.php [NC,L]
 </IfModule>

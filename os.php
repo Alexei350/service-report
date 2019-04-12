@@ -4,7 +4,7 @@
 		<title>OS Report Beta v0.1</title>
 	  	<meta charset="UTF-8">
 
-	  	<link rel="shortcut icon" href="/img/favicon.png">
+	  	<link rel="shortcut icon" href="/img/logo-dark.png">
 
 	  	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 		<script src="bootstrap/js/bootstrap.min.js"></script>
@@ -53,7 +53,7 @@
 
 		<main role="main" class="inner cover">
 			<div class="row justify-content-md-center">
-		  		<div class="col-lg-10">
+		  		<div class="col-lg-8">
 		  			<div class="py-5 text-center">
 						<img class="d-block mx-auto mb-4" src="/img/os.png" alt="" width="72" height="72">
 						<h2>Cadastro de Ordens de Serviço</h2>
@@ -224,19 +224,10 @@
 					        </div>
 
 				        	<hr class="mb-4">
-				        	<button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+				        	<button class="btn btn-outline-success btn-lg" type="submit">Salvar</button>
+				        	<button class="btn btn-outline-danger btn-lg" type="submit">Cancelar</button>
 				      	</form>
-				    </div>
-
-					<footer class="my-5 pt-5 text-muted text-center text-small">
-						<p class="mb-1">&copy; 2017-2019 Company Name</p>
-						<ul class="list-inline">
-							<li class="list-inline-item"><a href="#">Privacy</a></li>
-							<li class="list-inline-item"><a href="#">Terms</a></li>
-							<li class="list-inline-item"><a href="#">Support</a></li>
-						</ul>
-					</footer>
-			  	
+				    </div>			  	
 				</div>
 			</div>
 		</main>

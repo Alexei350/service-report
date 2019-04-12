@@ -4,7 +4,7 @@
 		<title>OS Report Beta v0.1</title>
 	  	<meta charset="UTF-8">
 
-	  	<link rel="shortcut icon" href="/img/favicon.png">
+	  	<link rel="shortcut icon" href="/img/logo-dark.png">
 
 	  	<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
 		<script src="bootstrap/js/bootstrap.min.js"></script>
@@ -45,7 +45,7 @@
 		<main role="main" class="inner cover">
 	  		<form class="form-signin">
 	  			<!--Cabeçalho do login-->
-				<img class="mb-4" src="/img/login.png" alt="" width="125" height="125">
+				<img class="mb-4" src="/img/login.png" alt="" width="128" height="128">
 				<h1 class="h3 mb-3 font-weight-normal">Login</h1>
 
 				<!--Email-->
@@ -64,7 +64,7 @@
 				</div>
 
 				<!--Botão de aceitar-->
-				<button class="btn btn-lg btn-primary btn-block" type="submit">Conectar</button>
+				<button class="btn btn-lg btn-outline-primary btn-block" type="submit">Conectar</button>
 			</form>
 		</main>
 	</body>

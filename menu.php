@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+<nav class="navbar navbar-expand sticky-top navbar-dark" style="background-color: #323050;">
 	<a class="navbar-brand" href="/">
 	    <img src="/img/logo-white.png" width="30" height="30" alt="Logo">
 	</a>
@@ -14,18 +14,17 @@
 			  	<a class="nav-link" href="/os">Cadastrar</a>
 			</li>
 			<li class="nav-item dropdown">
-			  	<a class="nav-link" href="/">Pesquisar</a>
+			  	<a class="nav-link disabled" href="/" tabindex="-1" aria-disabled="true">Pesquisar</a>
 			</li>
 			<li class="nav-item">
-			  	<a class="nav-link" href="/">Relatórios</a>
-			</li>
-			<li class="nav-item">
-			  	<a class="nav-link" href="/login">Login</a>
+			  	<a class="nav-link" href="/relatorios">Relatórios</a>
 			</li>
 		</ul>
-		<form class="form-inline my-2 my-lg-0">
-		  	<input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-		  	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+		<form class="form-inline my-10 my-lg-0">
+		  	<div class="btn-group" role="group" aria-label="Basic example">
+				<a role="button" href="/login" class="btn btn-outline-primary">Login</a>
+				<a role="button" href="/register" class="btn btn-outline-light">Registrar</a>
+			</div>
 		</form>
 	</div>
 </nav>
