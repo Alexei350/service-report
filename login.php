@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>OS Report</title>
+		<title>OS Report Beta v0.1</title>
 	  	<meta charset="UTF-8">
+
+	  	<link rel="shortcut icon" href="/img/logo-white.png">
 
 	  	<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
 		<script src="bootstrap/js/bootstrap.min.js"></script>
@@ -34,38 +36,36 @@
 	</head>
 
 	<body class="text-center">
-		<div class="container">
-		  	<div class="row">
-			    <div class="col-sm">
-			    	<!--Barra de navegação-->
-			      	<?include("menu.php")?>
-			    </div>
-		  	</div>
-		  	<div class="row" id="login">
-		  		<form class="form-signin">
-		  			<!--Cabeçalho do login-->
-					<img class="mb-4" src="/img/login.png" alt="" width="125" height="125">
-					<h1 class="h3 mb-3 font-weight-normal">Login</h1>
+		<header class="masthead mb-auto">
+		    <div class="inner">
+		      	<?include("menu.php")?>
+		    </div>
+		</header>
 
-					<!--Email-->
-					<label for="inputEmail" class="sr-only">Email</label>
-					<input type="email" id="inputEmail" class="form-control" placeholder="Ex: usuario@dominio.com" required autofocus>
-					
-					<!--Senha-->
-					<label for="inputPassword" class="sr-only">Senha</label>
-					<input type="password" id="inputPassword" class="form-control" placeholder="Digite sua senha" required>
-					
-					<!--Lebrar usuário-->
-					<div class="checkbox mb-3">
-						<label>
-							<input type="checkbox" value="remember-me"> Lembrar usuário
-						</label>
-					</div>
+		<main role="main" class="inner cover">
+	  		<form class="form-signin">
+	  			<!--Cabeçalho do login-->
+				<img class="mb-4" src="/img/login.png" alt="" width="125" height="125">
+				<h1 class="h3 mb-3 font-weight-normal">Login</h1>
 
-					<!--Botão de aceitar-->
-					<button class="btn btn-lg btn-primary btn-block" type="submit">Conectar</button>
-				</form>
-		  	</div>
-		</div>
+				<!--Email-->
+				<label for="inputEmail" class="sr-only">Email</label>
+				<input type="email" id="inputEmail" class="form-control" placeholder="Ex: usuario@dominio.com" required autofocus>
+				
+				<!--Senha-->
+				<label for="inputPassword" class="sr-only">Senha</label>
+				<input type="password" id="inputPassword" class="form-control" placeholder="Digite sua senha" required>
+				
+				<!--Lebrar usuário-->
+				<div class="checkbox mb-3">
+					<label>
+						<input type="checkbox" value="remember-me"> Lembrar usuário
+					</label>
+				</div>
+
+				<!--Botão de aceitar-->
+				<button class="btn btn-lg btn-primary btn-block" type="submit">Conectar</button>
+			</form>
+		</main>
 	</body>
 </html>

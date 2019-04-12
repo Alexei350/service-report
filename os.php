@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>My First HTML</title>
+		<title>OS Report Beta v0.1</title>
 	  	<meta charset="UTF-8">
+
+	  	<link rel="shortcut icon" href="/img/logo-white.png">
 
 	  	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 		<script src="bootstrap/js/bootstrap.min.js"></script>

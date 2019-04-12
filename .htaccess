@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  RewriteRule ^/?$ /index.php [NC,L]
+  RewriteRule ^os/?$ /os.php [NC,L]
+  RewriteRule ^login/?$ /login.php [NC,L]
+</IfModule>
