@@ -9,25 +9,31 @@ a:hover {
   color: #fff;
 }
 
-/* Custom default button */
+/* Botão padrão personalizado */
 .btn-secondary,
 .btn-secondary:hover,
 .btn-secondary:focus {
   color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
+  text-shadow: none;
   background-color: #fff;
   border: .05rem solid #fff;
 }
 
 
 /*
- * Base structure
+ * Base
  */
+
+/*main{
+    background-image: url(/img/background.jpg);
+    background-repeat: repeat-y;
+    background-size: 100%;
+}*/
 
 html,
 body {
-  height: 100%;
-  background-color: #f5f5f5;
+    height: 100%;
+    background-color: #f5f5f5;
 }
 
 body {
@@ -40,7 +46,7 @@ body {
 
 
 /*
- * Header
+ * Cabeçalho
  */
 .masthead {
   margin-bottom: 2rem;
@@ -81,10 +87,6 @@ body {
   }
 }
 
-
-/*
- * Cover
- */
 .cover {
   padding: 0 1.5rem;
 }
@@ -93,10 +95,6 @@ body {
   font-weight: 700;
 }
 
-
-/*
- * Footer
- */
 .mastfoot {
   color: rgba(255, 255, 255, .5);
 }

@@ -149,7 +149,7 @@
                     </div>
                     
                     <hr class="mb-4">
-                    <button class="btn btn-primary btn-lg btn-block" type="submit">Enviar</button>
+                    <button class="btn btn-outline-primary btn-lg btn-block" type="submit">Enviar</button>
                   </form>
                     </div>
                 </div>

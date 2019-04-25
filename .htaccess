@@ -6,4 +6,5 @@
   RewriteRule ^login/?$ /login.php [NC,L]
   RewriteRule ^relatorios/?$ /relatorios.php [NC,L]
   RewriteRule ^register/?$ /register.php [NC,L]
+  RewriteRule ^pesquisar/?$ /pesquisa.php [NC,L]
 </IfModule>

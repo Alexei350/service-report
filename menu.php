@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand sticky-top navbar-dark" style="background-color: #323050;">
+<nav class="navbar navbar-expand sticky-top navbar-dark" style="background-color: #343050;">
 	<a class="navbar-brand" href="/">
 	    <img src="/img/logo-white.png" width="30" height="30" alt="Logo">
 	</a>
@@ -14,7 +14,7 @@
 			  	<a class="nav-link" href="/os">Cadastrar</a>
 			</li>
 			<li class="nav-item dropdown">
-			  	<a class="nav-link disabled" href="/" tabindex="-1" aria-disabled="true">Pesquisar</a>
+			  	<a class="nav-link" href="/pesquisar">Pesquisar</a>
 			</li>
 			<li class="nav-item">
 			  	<a class="nav-link" href="/relatorios">Relatórios</a>
