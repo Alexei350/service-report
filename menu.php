@@ -20,11 +20,24 @@
 			  	<a class="nav-link" href="/relatorios">Relatórios</a>
 			</li>
 		</ul>
-		<form class="form-inline my-10 my-lg-0">
-		  	<div class="btn-group" role="group" aria-label="Basic example">
-				<a role="button" href="/login" class="btn btn-outline-primary">Login</a>
-				<a role="button" href="/register" class="btn btn-outline-light">Registrar</a>
-			</div>
-		</form>
+		<?
+			session_start();
+			
+			//Verifica se usuário está logado
+			$logado = ISSET($_SESSION['Nome']);
+			if($logado)
+			{
+				echo "<div style='padding-right:10px; color:#FFFFFF'>Olá {$_SESSION['Nome']}</div><a role='button' href='logoff.php' class='btn btn-outline-danger'>Logoff</a>";
+			}
+			else
+			{
+				echo "	<form class='form-inline my-10 my-lg-0'>
+								<div class='btn-group' role='group' aria-label='Basic example'>
+								<a role='button' href='/login' class='btn btn-outline-primary'>Login</a>
+								<a role='button' href='/register' class='btn btn-outline-light'>Registrar</a>
+							</div>
+						</form>";
+			}
+		?>
 	</div>
 </nav>

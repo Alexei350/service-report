@@ -20,7 +20,7 @@
 
     header("location:login.php");*/
 
-    $xmldata = simplexml_load_file("/database/config.xml") or die("Falha ao carregar XML");
+    $xmldata = simplexml_load_file("database/config.xml") or die("Falha ao carregar XML");
 
     $host = $xmldata->host;
     $user = $xmldata->user;
@@ -28,7 +28,7 @@
     $database = $xmldata->database;
     $port = $xmldata->port;
     
-    $mysqli = new mysqli($host, $user, $password, $database, $port);
+    $mysqli = new mysqli($host, $user, $password, $database, $port) or die ("Erro ao conectar ao banco de dados");
 
     session_start();
 
