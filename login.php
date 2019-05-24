@@ -36,6 +36,8 @@
 	</head>
 
 	<body class="text-center">
+		<?session_start()?>
+
 		<header class="masthead mb-auto">
 		    <div class="inner">
 		      	<?include("menu.php")?>
@@ -43,18 +45,18 @@
 		</header>
 
 		<main role="main" class="inner cover">
-	  		<form class="form-signin">
+	  		<form class="form-signin" action="sessao.php" method="post">
 	  			<!--Cabeçalho do login-->
 				<img class="mb-4" src="/img/login.png" alt="" width="128" height="128">
 				<h1 class="h3 mb-3 font-weight-normal">Login</h1>
 
 				<!--Email-->
 				<label for="inputEmail" class="sr-only">Email</label>
-				<input type="email" id="inputEmail" class="form-control" placeholder="Ex: usuario@dominio.com" required autofocus>
+				<input type="email" id="inputEmail" name="email" class="form-control" placeholder="Ex: usuario@dominio.com" required autofocus>
 				
 				<!--Senha-->
 				<label for="inputPassword" class="sr-only">Senha</label>
-				<input type="password" id="inputPassword" class="form-control" placeholder="Digite sua senha" required>
+				<input type="password" id="inputPassword" name="senha" class="form-control" placeholder="Digite sua senha" required>
 				
 				<!--Lebrar usuário-->
 				<div class="checkbox mb-3">
