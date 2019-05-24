@@ -32,7 +32,7 @@
     $mysqli = new mysqli("127.0.0.1", "root", "", "projeto", 3306);
     
     $senhaMD5 = md5($senha);
-    $sql = "SELECT * FROM `usuario` WHERE `Email` = '$login' AND `Senha`= '{$senhaMD5}'";
+    $sql = "SELECT * FROM `usuario` WHERE `email` = '$login' AND `senha`= '{$senhaMD5}'";
     $resultado = $mysqli->query($sql);
 
     if(mysqli_num_rows($resultado) > 0)

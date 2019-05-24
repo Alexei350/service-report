@@ -47,6 +47,7 @@
 				  	<table class="table table-striped">
 						<thead>
 							<tr>
+								<th scope="col">#</th>
 								<th scope="col">Cliente</th>
 								<th scope="col">Serviço</th>
 								<th scope="col" class="text-center">Tempo</th>
@@ -61,11 +62,12 @@
 								$mysqli->query("SET NAMES UTF8");
 
 								$res = $mysqli->query("SELECT *
+															, os.ID as ID_os
 								
 														FROM report_os as os 
 														
 													INNER JOIN report_cliente as cliente 
-																ON os.ID_Cliente = cliente.ID 
+																ON os.ID_cliente = cliente.ID 
 																
 													ORDER BY os.ID ASC");
 								$res->data_seek(0);
@@ -73,10 +75,11 @@
 								while ($row = $res->fetch_assoc()) 
 								{
 									echo "	<tr>
-												<td>{$row['Nome']}</td>
-												<td>{$row['Servico']}</td>
-												<td>{$row['Tempo']}h</td>
-												<td class='text-right'>R$ {$row['Valor']}</td>
+												<td><strong>{$row['ID_os']}</strong></td>
+												<td>{$row['nome']}</td>
+												<td>{$row['servico']}</td>
+												<td>{$row['tempo']}h</td>
+												<td class='text-right'>R$ {$row['valor']}</td>
 												<td>
 													<button class='btn btn-sm btn-primary'><i class='fa fa-edit'></i></button>
 													<button class='btn btn-sm btn-danger'><i class='fa fa-trash'></i></button>
