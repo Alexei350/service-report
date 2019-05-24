@@ -31,9 +31,11 @@
 
     $mysqli = new mysqli("127.0.0.1", "root", "", "projeto", 3306);
     
-    $mysqli->query("SELECT * FROM `usuario` WHERE `Nome` = '$login' AND `Senha`= '$senha'");
+    $senhaMD5 = md5($senha);
+    $sql = "SELECT * FROM `usuario` WHERE `Email` = '$login' AND `Senha`= '{$senhaMD5}'";
+    $resultado = $mysqli->query($sql);
 
-    if(mysqli_num_rows($mysqli) > 0)
+    if(mysqli_num_rows($resultado) > 0)
     {
         $_SESSION['login'] = $login;
         $_SESSION['senha'] = $senha;
