@@ -20,6 +20,15 @@
 
     header("location:login.php");*/
 
+    $xmldata = simplexml_load_file("/database/config.xml") or die("Falha ao carregar XML");
+
+    $host = $xmldata->host;
+    $user = $xmldata->user;
+    $password = $xmldata->password;
+    $database = $xmldata->database;
+    $port = $xmldata->port;
+    
+    $mysqli = new mysqli($host, $user, $password, $database, $port);
 
     session_start();
 
@@ -28,8 +37,6 @@
 
     $login = $_POST['email'];
     $senha = $_POST['senha'];
-
-    $mysqli = new mysqli("127.0.0.1", "root", "", "projeto", 3306);
     
     $senhaMD5 = md5($senha);
     $sql = "SELECT * FROM `usuario` WHERE `email` = '$login' AND `senha`= '{$senhaMD5}'";
