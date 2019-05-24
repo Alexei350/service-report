@@ -47,13 +47,13 @@
         $_SESSION['login'] = $login;
         $_SESSION['senha'] = $senha;
 
-        header('location:login.php');
+        header('location:/login');
     }
     else
     {
         unset ($_SESSION['login']);
         unset ($_SESSION['senha']);
 
-        header('location:login.php');
+        header('location:/login');
     }
 ?>

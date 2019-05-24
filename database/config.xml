@@ -1,8 +1,8 @@
 <?xml version="1.0" standalone="yes"?>
 <config>
-  <host></host>
-  <user></user>
-  <password></password>
-  <database></database>
-  <port></port>
+    <host>127.0.0.1</host>
+    <user>imed</user>
+    <password>imed10741961</password>
+    <database>projeto</database>
+    <port>3306</port>
 </config>
