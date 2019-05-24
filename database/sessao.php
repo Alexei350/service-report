@@ -20,7 +20,7 @@
 
     header("location:login.php");*/
 
-    $xmldata = simplexml_load_file("database/config.xml") or die("Falha ao carregar XML");
+    $xmldata = simplexml_load_file("config.xml") or die("Falha ao carregar XML");
 
     $host = $xmldata->host;
     $user = $xmldata->user;
