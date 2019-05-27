@@ -13,6 +13,24 @@
 	</head>
 
 	<body class="text-center">
+		<?
+			include('database/config.php');
+		?>
+
+		<?/*<div class="container">
+			<div class="row">
+				<div class="col-sm">
+					One of three columns
+				</div>
+				<div class="col-sm">
+					One of three columns
+				</div>
+				<div class="col-sm">
+					One of three columns
+				</div>
+			</div>
+		</div>*/?>
+	
 		<header class="navbar navbar-expand sticky-top navbar-dark" style="background-color: #343050;">
 			<a class="navbar-brand" href="/">
 				<img src="/img/logo-white.png" width="30" height="30" alt="Logo">
