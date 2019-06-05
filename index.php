@@ -55,15 +55,12 @@
 					$logado = ISSET($_SESSION['Nome']);
 					if($logado)
 					{
-						echo "<div style='padding-right:10px; color:#FFFFFF'>Olá {$_SESSION['Nome']}</div><a role='button' href='paginas/controle_sessao/logoff.php' class='btn text-danger'><i class='fas fa-user-slash'></i> Logout</a>";
+						echo "<div style='padding-right:10px; color:#FFFFFF'>Olá {$_SESSION['Nome']}!</div><a role='button' href='paginas/controle_sessao/logoff.php' class='btn text-danger'><i class='fas fa-user-slash'></i> Logout</a>";
 					}
 					else
 					{
 						echo "	<form class='form-inline my-10 my-lg-0'>
-										<div class='btn-group' role='group' aria-label='Basic example'>
-										<a role='button' href='/login' class='btn btn-outline-primary'><i class='fas fa-user-lock'></i></a>
-										<a role='button' href='/register' class='btn btn-outline-light'>Registrar</a>
-									</div>
+									<a role='button' href='/login' class='btn text-primary'><i class='fas fa-sign-in-alt'></i> Login</a>
 								</form>";
 					}
 				?>
