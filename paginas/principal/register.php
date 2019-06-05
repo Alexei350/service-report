@@ -2,7 +2,7 @@
 
 <div class="row justify-content-md-center">
 	<div class="col-lg-8">
-		<h4 class="mb-3">Dados pessoais</h4>
+		<h4 class="mb-3" id="top_element">Dados pessoais</h4>
 		<form class="needs-validation" novalidate>
 			<div class="row">
 				<div class="col-md-6 mb-3">
@@ -97,33 +97,8 @@
 			</div>
 			<hr class="mb-4">
 
-			<h4 class="mb-3">Pagamento</h4>
-
-			<div class="d-block my-3">
-				<div class="custom-control custom-radio">
-					<input id="gratis" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-					<label class="custom-control-label" for="gratis">Grátis</label>
-				</div>
-				<div class="custom-control custom-radio">
-					<input id="credito" name="paymentMethod" type="radio" class="custom-control-input" required>
-					<label class="custom-control-label" for="credito">Cartão de crédito</label>
-				</div>
-				<div class="custom-control custom-radio">
-					<input id="debito" name="paymentMethod" type="radio" class="custom-control-input" required>
-					<label class="custom-control-label" for="debito">Cartão de débito</label>
-				</div>
-				<div class="custom-control custom-radio">
-					<input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-					<label class="custom-control-label" for="paypal">PayPal</label>
-				</div>
-				<div class="custom-control custom-radio">
-					<input id="boleto" name="paymentMethod" type="radio" class="custom-control-input" required>
-					<label class="custom-control-label" for="boleto">Boleto</label>
-				</div>
-			</div>
-
 			<hr class="mb-4">
-			<button class="btn btn-outline-primary btn-lg btn-block" type="submit">Enviar</button>
+			<button class="btn btn-outline-primary btn-lg btn-block" id="bottom_element" type="submit">Enviar</button>
 		</form>
 	</div>
 </div>

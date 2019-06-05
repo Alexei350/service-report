@@ -6,6 +6,7 @@
 
 	  	<link rel="shortcut icon" href="/img/logo-dark.png">
 
+		<link rel="stylesheet" href="styles/global.css">
 	  	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 
