@@ -9,8 +9,17 @@
             <p class='lead'>O OS Report é um sistema web de gerenciamento de ordens de serviço, geração de relatórios. Registre-se já para aproveitar os benefícios, ou faça login, caso já seja cadastrado.</p>
             
             <p class='lead'>
-                <a href='/login' class='btn btn-lg btn-outline-primary'>Login</a>
-                <a href='/register' class='btn btn-lg btn-outline-secondary'>Registrar</a>
+                <?php
+                    if (isset($_SESSION['Nome'])) 
+                    {
+                        echo "Olá {$_SESSION['Nome']}, bem vindo(a) de volta!";
+                    } 
+                    else 
+                    {
+                        echo "  <a href='/login' class='btn btn-lg btn-outline-primary'>Login</a>
+                                <a href='/register' class='btn btn-lg btn-outline-secondary'>Registrar</a>";
+                    }
+                ?>
             </p>
         </div> 
     </div>
