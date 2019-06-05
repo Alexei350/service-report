@@ -1,6 +1,5 @@
 <style>
-	.bd-placeholder-img 
-	{
+	.bd-placeholder-img {
 		font-size: 1.125rem;
 		text-anchor: middle;
 		-webkit-user-select: none;
@@ -9,29 +8,22 @@
 		user-select: none;
 	}
 
-	@media (min-width: 768px) 
-	{
-		.bd-placeholder-img-lg 
-		{
+	@media (min-width: 768px) {
+		.bd-placeholder-img-lg {
 			font-size: 3.5rem;
 		}
 	}
 
-	#os
-	{
+	#os {
 		max-width: 960px;
 	}
 
-	.lh-condensed 
-	{ 
-		line-height: 1.25; 
+	.lh-condensed {
+		line-height: 1.25;
 	}
 </style>
 
 <script src="/scripts/validacao.js"></script>
-
-
-
 
 <div class="row justify-content-md-center">
 	<div class="col-lg-6">
@@ -39,29 +31,29 @@
 			<img class="d-block mx-auto mb-4" src="/img/os.png" alt="" width="72" height="72">
 			<h2>Cadastro de Ordens de Serviço</h2>
 			<p class="lead">Forneça os dados do cliente, descrição dos serviços e informações para adicionar a ordem de serviço.</p>
-		</div>		  	
+		</div>
 	</div>
 </div>
 
 <div class="row justify-content-md-center">
 	<div class="col-md-6 align-self-start">
 		<h4 class="mb-3">Dados do cliente</h4>
-		
+
 		<form class="needs-validation" novalidate>
 			<div class="row">
 				<div class="col-md-6 mb-3">
 					<label for="firstName">Primeiro nome</label>
 					<input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-					
+
 					<div class="invalid-feedback">
 						Primeiro nome válido é necessário.
 					</div>
 				</div>
-				
+
 				<div class="col-md-6 mb-3">
 					<label for="lastName">Sobrenome</label>
 					<input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-					
+
 					<div class="invalid-feedback">
 						Sobrenome válido é necessário.
 					</div>
@@ -71,22 +63,22 @@
 			<div class="mb-3">
 				<label for="email">Email <span class="text-muted">(Opcional)</span></label>
 				<input type="email" class="form-control" id="email" placeholder="Ex: usuario@dominio.com">
-				
+
 				<div class="invalid-feedback">
 					Por favor insira um email válido.
 				</div>
 			</div>
 
-			<div class="mb-3">
-				<label for="address">Endereço</label>
-				<input type="text" class="form-control" id="address" placeholder="Ex: Av. Brasil, 123" required>
-				
-				<div class="invalid-feedback">
-					Por favor insira o endereço.
-				</div>
-			</div>
-
 			<div class="row">
+				<div class="col-md-3 mb-3">
+					<label for="zip" ´>CEP</label>
+					<input type="text" class="form-control" id="zip" placeholder="" required>
+
+					<div class="invalid-feedback">
+						Insira um CEP válido.
+					</div>
+				</div>
+
 				<div class="col-md-5 mb-3">
 					<label for="country">País</label>
 					<select class="custom-select d-block w-100" id="country" required>
@@ -97,7 +89,7 @@
 						Por favor selecione um país válido.
 					</div>
 				</div>
-				
+
 				<div class="col-md-4 mb-3">
 					<label for="state">Estado</label>
 					<select class="custom-select d-block w-100" id="state" required>
@@ -130,19 +122,19 @@
 						<option>Sergipe (SE)</option>
 						<option>Tocantins (TO)</option>
 					</select>
-					
+
 					<div class="invalid-feedback">
 						Por favor selecione um estado válido.
 					</div>
 				</div>
-				
-				<div class="col-md-3 mb-3">
-					<label for="zip"´>CEP</label>
-					<input type="text" class="form-control" id="zip" placeholder="" required>
-					
-					<div class="invalid-feedback">
-						Insira um CEP válido.
-					</div>
+			</div>
+
+			<div class="mb-3">
+				<label for="address">Endereço</label>
+				<input type="text" class="form-control" id="address" placeholder="Ex: Av. Brasil, 123" required>
+
+				<div class="invalid-feedback">
+					Por favor insira o endereço.
 				</div>
 			</div>
 
