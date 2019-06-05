@@ -24,6 +24,7 @@
 
 			<!--Botão de aceitar-->
 			<button class="btn btn-lg btn-outline-primary btn-block" type="submit">Conectar</button>
+			<a role="button" href="/register" class="btn btn-md text-primary">Não possui uma conta?</button>
 		</form>
 	</main>
 </body>

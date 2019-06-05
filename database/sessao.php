@@ -9,28 +9,29 @@
     $database = $xmldata->database;
     $port = (int)$xmldata->port;
     
+    ini_set('default_charset', 'UTF-8');
     $mysqli = new mysqli($host, $user, $password, $database, $port) or die ("Erro ao conectar ao banco de dados");
+    $mysqli->query("SET NAMES UTF8");
 
-    $_SESSION['Nome'] = 'Alexei';
-    $_SESSION['Email'] = $_POST['email'];
+    $senha = md5($_POST['senha']);
 
-    $senha = $_POST['senha'];
-    $senhaMD5 = md5($senha);
+    $sql = "SELECT * FROM `usuario` WHERE `email` = '{$_POST['email']}' AND `senha`= '{$senha}'";
 
-    $sql = "SELECT * FROM `usuario` WHERE `email` = '{$_POST['email']}' AND `senha`= '{md5($senha)}'";
-    $resultado = $mysqli->query($sql);
+    $consulta = $mysqli->query($sql);
 
-    if(mysqli_num_rows($resultado) > 0)
+    if(mysqli_num_rows($consulta) > 0)
     {
-        $_SESSION['login'] = $login;
-        $_SESSION['senha'] = $senha;
+        $resultado = $consulta->fetch_assoc();
 
-        header('location:/login');
+        $_SESSION['Nome'] = $resultado['nome'];
+        $_SESSION['Email'] = $resultado['email'];
+
+        header('location:/');
     }
     else
     {
-        unset ($_SESSION['login']);
-        unset ($_SESSION['senha']);
+        unset ($_SESSION['Nome']);
+        unset ($_SESSION['Email']);
 
         header('location:/login');
     }

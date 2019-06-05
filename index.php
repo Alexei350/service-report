@@ -22,7 +22,7 @@
 	</head>
 
 	<body class="text-center">
-		<?
+		<?php
 			include('database/config.php');
 		?>
 
@@ -52,15 +52,22 @@
 					session_start();
 					
 					//Verifica se usuário está logado
-					$logado = ISSET($_SESSION['Nome']);
-					if($logado)
+					if(ISSET($_SESSION['Nome']))
 					{
-						echo "<div style='padding-right:10px; color:#FFFFFF'>Olá {$_SESSION['Nome']}!</div><a role='button' href='paginas/controle_sessao/logoff.php' class='btn text-danger'><i class='fas fa-user-slash'></i> Logout</a>";
+						echo "	<div style='padding-right:10px; color:#FFFFFF'>
+									Olá {$_SESSION['Nome']}!
+								</div>
+
+								<a role='button' href='paginas/controle_sessao/logoff.php' class='btn text-danger'>
+									<i class='fas fa-user-slash'></i> Logout
+								</a>";
 					}
 					else
 					{
 						echo "	<form class='form-inline my-10 my-lg-0'>
-									<a role='button' href='/login' class='btn text-primary'><i class='fas fa-sign-in-alt'></i> Login</a>
+									<a role='button' href='/login' class='btn text-primary'>
+										<i class='fas fa-sign-in-alt'></i> Login
+									</a>
 								</form>";
 					}
 				?>
@@ -68,8 +75,15 @@
 		</div>
 
 		<?
+			//Se passar o nome da página por get acessa a página referida, senão acessa a página de boas-vindas
 			if(file_exists("paginas/principal/{$_GET['pagina']}.php"))
+			{
+				//Se o usuário não for cadastrado e for acessar alguma página volta para o início
+				if(!ISSET($_SESSION['Nome']) && $_GET['pagina'] != 'login' && $_GET['pagina'] != 'register')
+					header('location:/');
+
 				include("paginas/principal/{$_GET['pagina']}.php");
+			}
 			else
 				include('paginas/principal/cover.php');
 		?>
