@@ -7,6 +7,15 @@
 	  	<link rel="shortcut icon" href="/img/logo-dark.png">
 
 	  	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+		<style>
+			body 
+			{
+				background-image: url("img/background-pattern.png");
+			}
+		</style>
+
 		<script src="bootstrap/js/bootstrap.min.js"></script>
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -17,21 +26,7 @@
 			include('database/config.php');
 		?>
 
-		<?/*<div class="container">
-			<div class="row">
-				<div class="col-sm">
-					One of three columns
-				</div>
-				<div class="col-sm">
-					One of three columns
-				</div>
-				<div class="col-sm">
-					One of three columns
-				</div>
-			</div>
-		</div>*/?>
-	
-		<header class="navbar navbar-expand sticky-top navbar-dark" style="background-color: #343050;">
+		<div class="navbar navbar-expand sticky-top navbar-dark" style="background-color: #1f2833">
 			<a class="navbar-brand" href="/">
 				<img src="/img/logo-white.png" width="30" height="30" alt="Logo">
 			</a>
@@ -60,20 +55,20 @@
 					$logado = ISSET($_SESSION['Nome']);
 					if($logado)
 					{
-						echo "<div style='padding-right:10px; color:#FFFFFF'>Olá {$_SESSION['Nome']}</div><a role='button' href='paginas/controle_sessao/logoff.php' class='btn btn-outline-danger'>Logoff</a>";
+						echo "<div style='padding-right:10px; color:#FFFFFF'>Olá {$_SESSION['Nome']}</div><a role='button' href='paginas/controle_sessao/logoff.php' class='btn text-danger'><i class='fas fa-user-slash'></i> Logout</a>";
 					}
 					else
 					{
 						echo "	<form class='form-inline my-10 my-lg-0'>
 										<div class='btn-group' role='group' aria-label='Basic example'>
-										<a role='button' href='/login' class='btn btn-outline-primary'>Login</a>
+										<a role='button' href='/login' class='btn btn-outline-primary'><i class='fas fa-user-lock'></i></a>
 										<a role='button' href='/register' class='btn btn-outline-light'>Registrar</a>
 									</div>
 								</form>";
 					}
 				?>
 			</div>
-		</header>
+		</div>
 
 		<?
 			if(file_exists("paginas/principal/{$_GET['pagina']}.php"))
