@@ -1,8 +1,8 @@
 <script src="/scripts/validacao.js"></script>
 
 <div class="row justify-content-md-center">
-	<div class="col-lg-8">
-		<h4 class="mb-3">Dados pessoais</h4>
+	<div class="col-lg-6">
+		<h4 class="mb-3" id="top_element">Dados pessoais</h4>
 		<form class="needs-validation" novalidate>
 			<div class="row">
 				<div class="col-md-6 mb-3">
@@ -123,7 +123,7 @@
 			</div>
 
 			<hr class="mb-4">
-			<button class="btn btn-outline-primary btn-lg btn-block" type="submit">Enviar</button>
+			<button class="btn btn-outline-primary btn-lg btn-block" id="bottom_element" type="submit">Enviar</button>
 		</form>
 	</div>
 </div>

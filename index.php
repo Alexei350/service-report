@@ -6,19 +6,13 @@
 
 	  	<link rel="shortcut icon" href="/img/logo-dark.png">
 
-	  	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	  	<link rel="stylesheet" href="styles/global.css">
+		<link rel="stylesheet" href="utilities/font_awesome/css/all.css">
+	  	<link rel="stylesheet" href="utilities/bootstrap/css/bootstrap.min.css">
 
-		<style>
-			body 
-			{
-				background-image: url("img/background-pattern.png");
-			}
-		</style>
-
-		<script src="bootstrap/js/bootstrap.min.js"></script>
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="utilities/ajax-popper.min.js"></script>
+		<script src="utilities/jquery-3.3.1.slim.min.js"></script>
+		<script src="utilities/bootstrap/js/bootstrap.min.js"></script>
 	</head>
 
 	<body class="text-center">

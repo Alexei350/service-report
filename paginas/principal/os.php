@@ -141,16 +141,25 @@
 			<hr class="mb-4">
 			<h4 class="mb-3">Dados do serviço</h4>
 
+			<div class="mb-3">
+				<label for="cc-name">Tipo de serviço</label>
+				<input type="text" class="form-control" id="cc-name" placeholder="" required>
+
+				<div class="invalid-feedback">
+					Informe um tipo de serviço
+				</div>
+			</div>
+
 			<div class="row">
-				<div class="col-md-6 mb-3">
-					<label for="cc-name">Tipo de serviço</label>
-					<input type="text" class="form-control" id="cc-name" placeholder="" required>
+				<div class="col mb-3">
+					<label for="cc-name">Data</label>
+					<input type="date" class="form-control" id="cc-data" placeholder="" required>
 
 					<div class="invalid-feedback">
-						Informe um tipo de serviço
+						Informe uma data válida
 					</div>
 				</div>
-				<div class="col-md-3 mb-3">
+				<div class="col mb-3">
 					<label for="cc-expiration">Valor</label>
 					<input type="text" class="form-control" id="cc-expiration" placeholder="" required>
 
@@ -158,7 +167,7 @@
 						Informe o valor cobrado em reais
 					</div>
 				</div>
-				<div class="col-md-3 mb-3">
+				<div class="col mb-3">
 					<label for="cc-cvv">Tempo</label>
 					<input type="text" class="form-control" id="cc-cvv" placeholder="" required>
 
