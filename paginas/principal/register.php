@@ -1,7 +1,7 @@
 <script src="/scripts/validacao.js"></script>
 
 <div class="row justify-content-md-center">
-	<div class="col-lg-8">
+	<div class="col-lg-6">
 		<h4 class="mb-3" id="top_element">Dados pessoais</h4>
 		<form class="needs-validation" novalidate>
 			<div class="row">
