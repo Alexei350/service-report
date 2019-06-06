@@ -8,6 +8,12 @@
     margin-bottom: 30px;
 }
 
+.row
+{
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
 body 
 {
     background-image: url("/img/background-pattern.png");

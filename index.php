@@ -6,9 +6,9 @@
 
 	  	<link rel="shortcut icon" href="/img/logo-dark.png">
 
-	  	<link rel="stylesheet" href="styles/global.css">
-		<link rel="stylesheet" href="utilities/font_awesome/css/all.css">
 	  	<link rel="stylesheet" href="utilities/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="utilities/font_awesome/css/all.css">
+	  	<link rel="stylesheet" href="styles/global.css">
 
 		<script src="utilities/ajax-popper.min.js"></script>
 		<script src="utilities/jquery-3.3.1.slim.min.js"></script>
@@ -53,7 +53,7 @@
 								</div>
 
 								<a role='button' href='paginas/controle_sessao/logoff.php' class='btn text-danger'>
-									<i class='fas fa-user-slash'></i> Logout
+									<i class='fas fa-sign-out-alt'></i> Logout
 								</a>";
 					}
 					else
