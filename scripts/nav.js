@@ -1,3 +1,6 @@
-function selecionaItem($id) { 
-    document.getElementById($id).className = "nav-item active";
+function selecionaItem(id) 
+{ 
+    console.log(id)
+    let element = document.getElementById(id);
+    element.className = "nav-item active";
 }
