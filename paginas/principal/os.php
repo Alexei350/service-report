@@ -23,8 +23,8 @@
 	}
 </style>
 
-<script src="/scripts/validacao.js"></script>
 <script src="/scripts/busca_cep.js"></script>
+<script src="/scripts/valida_form.js"></script>
 
 <div class="row justify-content-md-center">
 	<div class="col-lg-6">
@@ -100,7 +100,7 @@
 			</div>
 
 			<div class="row">
-				<div class="col-md-9 mb-3">
+				<div class="col-md-8 mb-3">
 					<label for="rua">Logradouro</label>
 					<input type="text" class="form-control" id="rua" placeholder="Ex: Av. Brasil" value="" required>
 
@@ -109,12 +109,12 @@
 					</div>
 				</div>
 
-				<div class="col-md-3 mb-3">
+				<div class="col-md-4 mb-3">
 					<label for="numero">Número</label>
 					<input type="text" class="form-control" id="numero" placeholder="" value="" required>
 
 					<div class="invalid-feedback">
-						Um número válido é necessário.
+						Por favor informe um número válido.
 					</div>
 				</div>
 			</div>

@@ -22,7 +22,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<?
+				<?php
 					$res = $mysqli->query("SELECT *
 												, os.ID as ID_os
 					
@@ -43,7 +43,7 @@
 									<td>{$row['tempo']}h</td>
 									<td class='text-right'>R$ {$row['valor']}</td>
 									<td>
-										<button class='btn btn-sm btn-primary'><i class='fa fa-edit'></i></button>
+										<a role='button' href='/os?edit={$row['ID_os']}' class='btn btn-sm btn-primary text-light'><i class='fa fa-edit'></i></a>
 										<button class='btn btn-sm btn-danger'><i class='fa fa-trash'></i></button>
 									</td>
 								</tr>";

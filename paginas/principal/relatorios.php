@@ -1,12 +1,5 @@
-<style>
-	#principal 
-	{
-		padding-top: 50px;
-	}
-</style>
-
 <main role="main" class="inner cover">
-	<div class="row justify-content-md-center" id="principal">
+	<div class="row justify-content-md-center" id="top_element">
 		<div class="col-lg-6">
 			<div class="jumbotron jumbotron-fluid">
 				<div class="container">
