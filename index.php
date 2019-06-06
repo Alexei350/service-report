@@ -53,7 +53,7 @@
 									Olá {$_SESSION['Nome']}!
 								</div>
 
-								<a role='button' href='paginas/controle_sessao/logoff.php' class='btn text-danger'>
+								<a role='button' href='database/sessao_logout.php' class='btn text-danger'>
 									<i class='fas fa-sign-out-alt'></i> Logout
 								</a>";
 					}
