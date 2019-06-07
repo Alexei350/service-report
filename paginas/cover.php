@@ -12,10 +12,10 @@
             </p>
             
             <?php
-                if (isset($_SESSION['Nome'])) 
+                if (isset($_SESSION['nome'])) 
                 {
                     echo "  <p class='lead'>
-                                Olá {$_SESSION['Nome']}, bem vindo(a) de volta!
+                                Olá {$_SESSION['nome']}, bem vindo(a) de volta!
                             </p>";
                 } 
                 else 
