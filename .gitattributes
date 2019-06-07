@@ -1,3 +1,6 @@
 utilities/* linguist-documentation=false
+utilities/* linguist-vendored=false
 *.php linguist-language=PHP
+*.php linguist-vendored=false
 *.sql linguist-documentation=false
+*.sql linguist-vendored=false
