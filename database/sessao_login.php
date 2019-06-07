@@ -23,15 +23,15 @@
     {
         $resultado = $consulta->fetch_assoc();
 
-        $_SESSION['Nome'] = $resultado['nome'];
-        $_SESSION['Email'] = $resultado['email'];
+        $_SESSION['nome'] = $resultado['nome'];
+        $_SESSION['email'] = $resultado['email'];
 
         header('location:/');
     }
     else
     {
-        unset ($_SESSION['Nome']);
-        unset ($_SESSION['Email']);
+        unset ($_SESSION['nome']);
+        unset ($_SESSION['email']);
 
         header('location:/login');
     }

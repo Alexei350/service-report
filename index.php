@@ -1,6 +1,16 @@
 <?php
 	//Inclui as configurações do banco de dadsos
 	include('database/config.php');
+
+	//define o id para chamar o modo dark
+	if(file_exists("paginas/{$_GET['pagina']}.php"))
+	{
+		$id = $_GET['pagina'];
+	}
+	else
+	{
+		$id = "inicio";
+	}
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +25,10 @@
 		<!--CSS do bootstrap-->
 	  	<link rel="stylesheet" href="utilities/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="utilities/font_awesome/css/all.css">
+
+		<!--Javascript da tela-->
+		<script src="scripts/nav.js"></script>
+		<script src="scripts/dark_mode.js"></script>
 		
 		<!--CSS global das telas-->
 		<link rel="stylesheet" href="styles/global.css">
@@ -54,10 +68,10 @@
 					session_start();
 					
 					//Verifica se usuário está logado
-					if(ISSET($_SESSION['Nome']))
+					if(ISSET($_SESSION['nome']))
 					{
 						echo "	<div style='padding-right:10px; color:#FFFFFF'>
-									Olá {$_SESSION['Nome']}!
+									Olá {$_SESSION['nome']}!
 								</div>
 
 								<a role='button' href='database/sessao_logout.php' class='btn text-danger'>
@@ -75,7 +89,7 @@
 				?>
 
 				<!--Botão do modo escuro-->
-				<button onclick="switchMode()" class="btn text-light"><i class='fas fa-adjust'></i></button>
+				<button onclick="switchMode('<?= $id ?>')" class="btn text-light"><i class='fas fa-adjust'></i></button>
 			</div>
 		</div>
 
@@ -88,16 +102,16 @@
 					if(file_exists("paginas/{$_GET['pagina']}.php"))
 					{
 						//Se o usuário não for cadastrado e for acessar alguma página volta para o início
-						if(!ISSET($_SESSION['Nome']) && $_GET['pagina'] != 'login' && $_GET['pagina'] != 'register')
+						if(!ISSET($_SESSION['nome']) && $_GET['pagina'] != 'login' && $_GET['pagina'] != 'register')
 							header('location:/');
 
 						include("paginas/{$_GET['pagina']}.php");
 
-						$id = "nav_{$_GET['pagina']}";
+						$id = $_GET['pagina'];
 					}
 					else
 					{
-						$id = "nav_inicio";
+						$id = "inicio";
 
 						include('paginas/cover.php');
 					}
@@ -105,14 +119,11 @@
 				
 				<!--Define o ícone de página ativo na navbar-->
 				<script type="text/javascript">
-					selecionaItem('<?= $id ?>');
+					selecionaItem('nav_<?= $id ?>');
+					inicializaCookie('<?= $id ?>');
 				</script>
 			</div>
 		</div>
-
-		<!--Javascript da tela-->
-		<script src="scripts/nav.js"></script>
-		<script src="scripts/dark_mode.js"></script>
 
 		<!--Javascript para o bootstrap-->
 		<script src="utilities/ajax-popper.min.js"></script>
