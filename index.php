@@ -74,14 +74,14 @@
 									Olá {$_SESSION['nome']}!
 								</div>
 
-								<a role='button' href='database/sessao_logout.php' class='btn text-danger'>
+								<a role='button' href='database/sessao_logout.php' class='btn text-danger shadow-none'>
 									<i class='fas fa-sign-out-alt'></i> Logout
 								</a>";
 					}
 					else
 					{
 						echo "	<form class='form-inline my-10 my-lg-0'>
-									<a role='button' href='/login' class='btn text-primary'>
+									<a role='button' href='/login' class='btn text-primary shadow-none'>
 										<i class='fas fa-sign-in-alt'></i> Login
 									</a>
 								</form>";
@@ -89,7 +89,7 @@
 				?>
 
 				<!--Botão do modo escuro-->
-				<button onclick="switchMode('<?= $id ?>')" class="btn text-light"><i class='fas fa-adjust'></i></button>
+				<button onclick="switchMode('<?= $id ?>')" class="btn text-light shadow-none"><i class='fas fa-adjust'></i></button>
 			</div>
 		</div>
 
