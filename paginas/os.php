@@ -110,24 +110,35 @@
 
 			<div class="row">
 				<div class="col mb-3">
-					<label for="cc-name">Data</label>
+					<label for="cc-data">Data</label>
 					<input type="date" class="form-control" id="cc-data" placeholder="" required>
 
 					<div class="invalid-feedback">
 						Informe uma data válida
 					</div>
 				</div>
+
 				<div class="col mb-3">
-					<label for="cc-expiration">Valor</label>
-					<input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+					<label for="cc-hora">Hora</label>
+					<input type="time" class="form-control" id="cc-hora" placeholder="" required>
+
+					<div class="invalid-feedback">
+						Informe uma hora válida
+					</div>
+				</div>
+
+				<div class="col mb-3">
+					<label for="cc-valor">Valor(R$)</label>
+					<input type="number" min="1" step="any" class="form-control" id="cc-valor" placeholder="" required>
 
 					<div class="invalid-feedback">
 						Informe o valor cobrado em reais
 					</div>
 				</div>
+
 				<div class="col mb-3">
-					<label for="cc-cvv">Tempo</label>
-					<input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+					<label for="cc-tempo">Tempo(horas)</label>
+					<input type="number" min="1" step="any" class="form-control" id="cc-tempo" placeholder="" required>
 
 					<div class="invalid-feedback">
 						Informe o tempo do serviço, em horas
