@@ -32,8 +32,6 @@ function setColorMode(darkMode, page)
 {
     let element = document.getElementById('body');
 
-    console.log(`img_${page}`);
-
     if(darkMode == 1)
     {
         element.style.background = 'url("/img/background-pattern-dark.png")';
