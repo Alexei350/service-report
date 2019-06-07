@@ -1,2 +1,3 @@
 utilities/* linguist-vendored=true
+*.sql linguist-vendored=true
 *.php linguist-language=PHP
