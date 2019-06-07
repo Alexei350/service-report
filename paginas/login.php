@@ -1,10 +1,10 @@
-<link rel="stylesheet" href="/styles/login.css">
+<link rel="stylesheet" href="styles/login.css">
 
 <body class="text-center">
 	<main role="main" class="inner cover">
-		<form class="form-signin" action="/database/sessao_login.php" method="post">
+		<form class="form-signin" action="database/sessao_login.php" method="post">
 			<!--Cabeçalho do login-->
-			<img class="mb-4" id="img_login" src="/img/login.png" alt="" width="128" height="128">
+			<img class="mb-4" id="img_login" src="img/login.png" alt="" width="128" height="128">
 			<h1 class="h3 mb-3 font-weight-normal">Login</h1>
 
 			<!--Email-->

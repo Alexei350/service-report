@@ -1,10 +1,10 @@
-<script src="/scripts/busca_cep.js"></script>
-<script src="/scripts/valida_form.js"></script>
+<script src="scripts/busca_cep.js"></script>
+<script src="scripts/valida_form.js"></script>
 
 <div class="row justify-content-md-center">
 	<div class="col-md-6 align-self-start">
 		<div class="py-5 text-center">
-			<img class="d-block mx-auto mb-4" id="img_os" src="/img/os.png" alt="" width="72" height="72">
+			<img class="d-block mx-auto mb-4" id="img_os" src="img/os.png" alt="" width="72" height="72">
 			<h2>Cadastro de Ordens de Serviço</h2>
 			<p class="lead">Forneça os dados do cliente, descrição dos serviços e informações para adicionar a ordem de serviço.</p>
 		</div>

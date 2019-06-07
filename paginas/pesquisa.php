@@ -1,7 +1,7 @@
 <div class="row justify-content-md-center">
 	<div class="col-lg-10">
 		<div class="py-5 text-center">
-			<img class="d-block mx-auto mb-4" id="img_pesquisa" src="/img/os.png" alt="" width="72" height="72">
+			<img class="d-block mx-auto mb-4" id="img_pesquisa" src="img/os.png" alt="" width="72" height="72">
 			<h1 class="cover-heading">Serviços Prestados</h1>
 		</div>
 
@@ -43,8 +43,8 @@
 									<td>{$row['tempo']}h</td>
 									<td class='text-right'>R$ {$row['valor']}</td>
 									<td class='text-right'>
-										<a role='button' href='/os?edit={$row['ID_os']}' class='btn btn-sm text-primary shadow-none'><i class='fa fa-edit'></i></a>
-										<a role='button' href='/database/crud/os_delete.php?id={$row['ID_os']}'class='btn btn-sm text-danger shadow-none'><i class='fa fa-trash'></i></button>
+										<a role='button' href='os?edit={$row['ID_os']}' class='btn btn-sm text-primary shadow-none'><i class='fa fa-edit'></i></a>
+										<a role='button' href='database/crud/os_delete.php?id={$row['ID_os']}'class='btn btn-sm text-danger shadow-none'><i class='fa fa-trash'></i></button>
 									</td>
 								</tr>";
 					}

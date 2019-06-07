@@ -20,7 +20,7 @@
 	  	<meta charset="UTF-8">
 
 		<!--Ícone da página-->
-	  	<link rel="shortcut icon" href="/img/logo-dark.png">
+	  	<link rel="shortcut icon" href="img/logo-dark.png">
 		  
 		<!--CSS do bootstrap-->
 	  	<link rel="stylesheet" href="utilities/bootstrap/css/bootstrap.min.css">
@@ -38,7 +38,7 @@
 		<!--Barra de navegação-->
 		<div class="navbar navbar-expand sticky-top navbar-dark" style="background-color: #1f2833">
 			<a class="navbar-brand" href="/">
-				<img src="/img/logo.png" width="30" height="30" alt="Logo">
+				<img src="img/logo.png" width="30" height="30" alt="Logo">
 			</a>
 
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

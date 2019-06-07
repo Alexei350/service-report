@@ -1,7 +1,7 @@
 <div class="row justify-content-md-center">
 	<div class="col-lg-10">
 		<div class="py-5 text-center">
-			<img class="d-block mx-auto mb-4" id="img_relatorios" src="/img/relatorios.png" alt="" width="72" height="72">
+			<img class="d-block mx-auto mb-4" id="img_relatorios" src="img/relatorios.png" alt="" width="72" height="72">
 			<h1 class="cover-heading">Relatórios Mensais</h1>
 		</div>
 

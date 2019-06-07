@@ -3,7 +3,7 @@
 <div class='row justify-content-md-center'>
     <div class='col-lg-5'>
         <div class='py-5 text-center'>
-            <img class='d-block mx-auto mb-4' id='img_cover' src='/img/index.png' alt='' width='128' height='128'>
+            <img class='d-block mx-auto mb-4' id='img_cover' src='img/cover.png' alt='' width='128' height='128'>
             
             <h1 class='cover-heading'>OS Report</h1>
             <p class='lead'>

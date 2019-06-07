@@ -1,4 +1,4 @@
-<script src="/scripts/valida_form.js"></script>
+<script src="scripts/valida_form.js"></script>
 
 <div class="row justify-content-md-center">
 	<div class="col-lg-6">
