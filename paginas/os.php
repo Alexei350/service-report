@@ -1,20 +1,14 @@
-<link rel="stylesheet" href="styles/os.css">
-
 <script src="/scripts/busca_cep.js"></script>
 <script src="/scripts/valida_form.js"></script>
 
 <div class="row justify-content-md-center">
-	<div class="col-lg-6">
+	<div class="col-md-6 align-self-start">
 		<div class="py-5 text-center">
 			<img class="d-block mx-auto mb-4" id="img_os" src="/img/os.png" alt="" width="72" height="72">
 			<h2>Cadastro de Ordens de Serviço</h2>
 			<p class="lead">Forneça os dados do cliente, descrição dos serviços e informações para adicionar a ordem de serviço.</p>
 		</div>
-	</div>
-</div>
 
-<div class="row justify-content-md-center">
-	<div class="col-md-6 align-self-start">
 		<h4 class="mb-3">Dados do cliente</h4>
 
 		<form class="needs-validation" novalidate>

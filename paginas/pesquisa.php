@@ -1,14 +1,9 @@
-<style>
-	#legenda_topo
-	{
-		padding-top: 30px;
-		padding-bottom: 30px;
-	}
-</style>
-
 <div class="row justify-content-md-center">
 	<div class="col-lg-10">
-		<h1 class="cover-heading" id="legenda_topo">Serviços Prestados</h1>
+		<div class="py-5 text-center">
+			<img class="d-block mx-auto mb-4" id="img_pesquisa" src="/img/os.png" alt="" width="72" height="72">
+			<h1 class="cover-heading">Serviços Prestados</h1>
+		</div>
 
 		<table class="table table-striped" id="tabela">
 			<thead>
