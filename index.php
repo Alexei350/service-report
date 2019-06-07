@@ -9,7 +9,7 @@
 	}
 	else
 	{
-		$id = "inicio";
+		$id = "cover";
 	}
 ?>
 
@@ -47,7 +47,7 @@
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item" id="nav_inicio">
+					<li class="nav-item" id="nav_cover">
 						<a class="nav-link" href="/">Início</a>
 					</li>
 
@@ -98,23 +98,11 @@
 			<div class="col">
 				<!--Chama a tela selecionada-->
 				<?php
-					//Se passar o nome da página por get acessa a página referida, senão acessa a página de boas-vindas
-					if(file_exists("paginas/{$_GET['pagina']}.php"))
-					{
-						//Se o usuário não for cadastrado e for acessar alguma página volta para o início
-						if(!ISSET($_SESSION['nome']) && $_GET['pagina'] != 'login' && $_GET['pagina'] != 'register')
-							header('location:/');
-
-						include("paginas/{$_GET['pagina']}.php");
-
-						$id = $_GET['pagina'];
-					}
-					else
-					{
-						$id = "inicio";
-
-						include('paginas/cover.php');
-					}
+					//Se passar o nome da página por get acessa a página referida, senão acessa a página de boas-vindas, se não for logado vai pra tela de login
+					if(file_exists("paginas/{$_GET['pagina']}.php") && !ISSET($_SESSION['nome']) && $_GET['pagina'] != 'login' && $_GET['pagina'] != 'register')
+						header('location:/login');
+						
+					include('paginas/' . $id . '.php');
 				?>
 				
 				<!--Define o ícone de página ativo na navbar-->
