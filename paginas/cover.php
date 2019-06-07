@@ -8,7 +8,7 @@
             <h1 class='cover-heading'>OS Report</h1>
             <p class='lead'>
                 O OS Report é um sistema web de gerenciamento<br>
-                de ordens de serviço, geração de relatórios.
+                de ordens de serviço e geração de relatórios.
             </p>
             
             <?php

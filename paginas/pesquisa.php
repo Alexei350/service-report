@@ -15,7 +15,7 @@
 					<th scope="col">Horário</th>
 					<th scope="col" class="text-center">Tempo</th>
 					<th scope="col" class="text-right">Valor</th>
-					<th> </th>
+					<th scope="col" class="text-right"> </th>
 				</tr>
 			</thead>
 			<tbody>
@@ -42,9 +42,9 @@
 									<td>{$row['hra']}</td>
 									<td>{$row['tempo']}h</td>
 									<td class='text-right'>R$ {$row['valor']}</td>
-									<td>
-										<a role='button' href='/os?edit={$row['ID_os']}' class='btn btn-sm btn-primary text-light'><i class='fa fa-edit'></i></a>
-										<a role='button' href='/database/crud/os_delete.php?id={$row['ID_os']}'class='btn btn-sm btn-danger'><i class='fa fa-trash'></i></button>
+									<td class='text-right'>
+										<a role='button' href='/os?edit={$row['ID_os']}' class='btn btn-sm text-primary shadow-none'><i class='fa fa-edit'></i></a>
+										<a role='button' href='/database/crud/os_delete.php?id={$row['ID_os']}'class='btn btn-sm text-danger shadow-none'><i class='fa fa-trash'></i></button>
 									</td>
 								</tr>";
 					}
