@@ -71,7 +71,7 @@
 									Olá {$_SESSION['nome']}!
 								</div>
 
-								<a role='button' href='database/sessao_logout.php' class='btn text-danger shadow-none'>
+								<a role='button' href='../session/sessao_logout.php' class='btn text-danger shadow-none'>
 									<i class='fas fa-sign-out-alt'></i> Logout
 								</a>";
 					}
