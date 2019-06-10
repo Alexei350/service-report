@@ -20,19 +20,7 @@
 			</thead>
 			<tbody>
 				<?php
-					include('connection/config.php');
-
-					$res = $connection->query("SELECT *
-												, os.ID as ID_os
-												, TIME_FORMAT(hora, '%H:%i') as hra
-					
-											 FROM report_os as os 
-											
-									   INNER JOIN report_cliente as cliente 
-								 		       ON os.ID_cliente = cliente.ID 
-													
-									  	 ORDER BY data DESC");
-					$res->data_seek(0);
+					include 'crud/os_select.php';
 
 					while ($row = $res->fetch_assoc()) 
 					{
@@ -45,10 +33,11 @@
 									<td>{$row['tempo']}h</td>
 									<td class='text-right'>R$ {$row['valor']}</td>
 									<td class='text-right'>
-										<a role='button' href='os?edit={$row['ID_os']}' class='btn btn-sm text-primary shadow-none'><i class='fa fa-edit'></i></a>
+										<a role='button' href='os/{$row['ID_os']}' class='btn btn-sm text-primary shadow-none'><i class='fa fa-edit'></i></a>
 										<a role='button' href='../crud/os_delete.php?ref=pesquisar&id={$row['ID_os']}'class='btn btn-sm text-danger shadow-none'><i class='fa fa-trash'></i></button>
 									</td>
 								</tr>";
+								//http://wbruno.com.br/php/desmistificando-urls-amigaveis-com-php-e-htaccessapache/
 					}
 				?>
 			</tbody>

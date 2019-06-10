@@ -99,7 +99,7 @@
 					if(file_exists("paginas/{$_GET['pagina']}.php") && !ISSET($_SESSION['nome']) && $_GET['pagina'] != 'login' && $_GET['pagina'] != 'register')
 						header('location:/login');
 						
-					include('paginas/' . $id . '.php');
+					include 'paginas/' . $id . '.php';
 				?>
 				
 				<!--Define o ícone de página ativo na navbar-->
