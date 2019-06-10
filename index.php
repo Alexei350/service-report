@@ -1,7 +1,4 @@
 <?php
-	//Inclui as configurações do banco de dadsos
-	include('database/config.php');
-
 	//define o id para chamar o modo dark
 	if(file_exists("paginas/{$_GET['pagina']}.php"))
 	{

@@ -146,8 +146,8 @@
 			</div>
 
 			<hr class="mb-4">
-			<button class="btn btn-outline-primary btn-lg" id="bottom_element" type="submit">Salvar</button>
-			<button class="btn btn-outline-danger btn-lg" id="bottom_element" type="submit">Cancelar</button>
+			<button class="btn text-primary btn-lg" id="bottom_element" type="submit"><i class='far fa-save'></i> Salvar</button>
+			<button class="btn text-danger btn-lg" id="bottom_element" type="reset"><i class='fas fa-ban'></i> Cancelar</button>
 		</form>
 	</div>
 </div>

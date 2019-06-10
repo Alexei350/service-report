@@ -17,9 +17,11 @@
 			</thead>
 			<tbody>
 				<?php
-					$res = $mysqli->query("SET lc_time_names = 'pt_BR';");
+					include('connection/config.php');
 
-					$res = $mysqli->query("SELECT DATE_FORMAT(os.data, '%M') AS mes
+					$res = $connection->query("SET lc_time_names = 'pt_BR';");
+
+					$res = $connection->query("SELECT DATE_FORMAT(os.data, '%M') AS mes
 												, DATE_FORMAT(os.data, '%Y') AS ano
 												, SUM(os.tempo) AS temp
 												, SUM(os.valor) AS val 
@@ -33,7 +35,6 @@
 										 GROUP BY DATE_FORMAT(os.data, '%Y-%m') 
 										 
 										 ORDER BY DATE_FORMAT(os.data, '%Y-%m') desc");
-					$res->data_seek(0);
 
 					while ($row = $res->fetch_assoc()) 
 					{

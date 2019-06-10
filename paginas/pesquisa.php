@@ -20,7 +20,9 @@
 			</thead>
 			<tbody>
 				<?php
-					$res = $mysqli->query("SELECT *
+					include('connection/config.php');
+
+					$res = $connection->query("SELECT *
 												, os.ID as ID_os
 												, TIME_FORMAT(hora, '%H:%i') as hra
 					
@@ -44,7 +46,7 @@
 									<td class='text-right'>R$ {$row['valor']}</td>
 									<td class='text-right'>
 										<a role='button' href='os?edit={$row['ID_os']}' class='btn btn-sm text-primary shadow-none'><i class='fa fa-edit'></i></a>
-										<a role='button' href='database/crud/os_delete.php?id={$row['ID_os']}'class='btn btn-sm text-danger shadow-none'><i class='fa fa-trash'></i></button>
+										<a role='button' href='database/crud/os_delete.php?ref=pesquisar&id={$row['ID_os']}'class='btn btn-sm text-danger shadow-none'><i class='fa fa-trash'></i></button>
 									</td>
 								</tr>";
 					}
