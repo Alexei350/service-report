@@ -27,7 +27,7 @@
 					{
 						echo "	<tr>
 									<td><strong>{$row['ID_os']}</strong></td>
-									<td>{$row['nome']}</td>
+									<td>{$row['nome']} {$row['sobrenome']}</td>
 									<td>{$row['servico']}</td>
 									<td>{$row['data']}</td>
 									<td>{$row['hra']}</td>
@@ -38,7 +38,6 @@
 										<a role='button' href='../crud/os_delete.php?ref=pesquisar&id={$row['ID_os']}'class='btn btn-sm text-danger shadow-none'><i class='fa fa-trash'></i></button>
 									</td>
 								</tr>";
-								//http://wbruno.com.br/php/desmistificando-urls-amigaveis-com-php-e-htaccessapache/
 					}
 				?>
 			</tbody>
