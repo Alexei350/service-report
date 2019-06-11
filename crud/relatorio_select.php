@@ -10,8 +10,8 @@
                                     
                                 FROM report_os AS os 
                                 
-                        INNER JOIN report_cliente AS cliente 
-                                    ON os.ID_cliente = cliente.id 
+                          INNER JOIN report_cliente AS cliente 
+                                  ON os.ID_cliente = cliente.id 
                                     
                             GROUP BY DATE_FORMAT(os.data, '%Y-%m') 
                             

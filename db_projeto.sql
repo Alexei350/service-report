@@ -1,6 +1,6 @@
 -- --------------------------------------------------------
 -- Servidor:                     127.0.0.1
--- Versão do servidor:           10.1.38-MariaDB - mariadb.org binary distribution
+-- Versão do servidor:           5.5.62 - MySQL Community Server (GPL)
 -- OS do Servidor:               Win64
 -- HeidiSQL Versão:              10.1.0.5464
 -- --------------------------------------------------------
@@ -13,18 +13,28 @@
 
 
 -- Copiando estrutura do banco de dados para projeto
+DROP DATABASE IF EXISTS `projeto`;
 CREATE DATABASE IF NOT EXISTS `projeto` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `projeto`;
 
 -- Copiando estrutura para tabela projeto.report_cliente
+DROP TABLE IF EXISTS `report_cliente`;
 CREATE TABLE IF NOT EXISTS `report_cliente` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(50) NOT NULL,
+  `sobrenome` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `cep` char(9) NOT NULL,
+  `cidade` varchar(50) NOT NULL,
+  `estado` varchar(50) NOT NULL,
+  `logradouro` varchar(50) NOT NULL,
+  `numero` varchar(50) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- Exportação de dados foi desmarcado.
 -- Copiando estrutura para tabela projeto.report_os
+DROP TABLE IF EXISTS `report_os`;
 CREATE TABLE IF NOT EXISTS `report_os` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `ID_cliente` int(11) NOT NULL,
@@ -37,17 +47,25 @@ CREATE TABLE IF NOT EXISTS `report_os` (
   PRIMARY KEY (`ID`),
   KEY `FK_report_os_report_cliente` (`ID_cliente`),
   CONSTRAINT `FK_report_os_report_cliente` FOREIGN KEY (`ID_cliente`) REFERENCES `report_cliente` (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- Exportação de dados foi desmarcado.
 -- Copiando estrutura para tabela projeto.usuario
+DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE IF NOT EXISTS `usuario` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(50) NOT NULL,
+  `sobrenome` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `senha` char(32) NOT NULL,
+  `empresa` varchar(50) NOT NULL,
+  `endereco` varchar(50) NOT NULL,
+  `cpfcnpj` varchar(50) NOT NULL,
+  `pais` varchar(50) NOT NULL,
+  `estado` varchar(50) NOT NULL,
+  `cep` varchar(50) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- Exportação de dados foi desmarcado.
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

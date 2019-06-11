@@ -8,6 +8,8 @@
 
     $consulta = $connection->query($sql);
 
+    // var_dump($consulta);
+
     if(mysqli_num_rows($consulta) > 0)
     {
         $resultado = $consulta->fetch_assoc();

@@ -16,11 +16,11 @@
 			<input type="password" id="inputPassword" name="senha" class="form-control" placeholder="Digite sua senha" required>
 
 			<!--Lembrar usuário-->
-			<div class="checkbox mb-3">
+			<!-- <div class="checkbox mb-3">
 				<label>
 					<input type="checkbox" value="remember-me"> Lembrar usuário
 				</label>
-			</div>
+			</div> -->
 
 			<!--Botão de aceitar-->
 			<button class="btn btn-lg btn-outline-primary btn-block" type="submit">Conectar</button>

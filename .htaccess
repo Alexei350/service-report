@@ -2,8 +2,9 @@
   RewriteEngine On
 
   RewriteRule ^/?$ /index.php [NC,L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^os\/([0-9]+)\/?$ index.php?pagina=os&edit=$1 [NC,L]
   RewriteRule ^os/?$ /index.php?pagina=os [NC,L]
-  RewriteRule ^os\/([0-9]+)?$ index.php?pagina=os&edit=$1 [NC,L]
   RewriteRule ^login/?$ /index.php?pagina=login [NC,L]
   RewriteRule ^relatorios/?$ /index.php?pagina=relatorios [NC,L]
   RewriteRule ^register/?$ /index.php?pagina=register [NC,L]

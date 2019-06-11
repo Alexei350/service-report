@@ -21,6 +21,7 @@
 			<tbody>
 				<?php
 					include 'crud/os_select.php';
+					$res = SelectTable();
 
 					while ($row = $res->fetch_assoc()) 
 					{
