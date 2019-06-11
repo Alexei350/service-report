@@ -1,11 +1,13 @@
 <div class="row justify-content-md-center">
 	<div class="col-lg-10">
+		<!-- Topo da página (imagem e título) -->
 		<div class="py-5 text-center">
 			<img class="d-block mx-auto mb-4" id="img_pesquisa" src="img/os.png" alt="" width="72" height="72">
 			<h1 class="cover-heading">Serviços Prestados</h1>
 		</div>
 
 		<table class="table table-striped" id="tabela">
+			<!-- Cabeçalho da tabela -->
 			<thead>
 				<tr>
 					<th scope="col">#</th>
@@ -18,6 +20,7 @@
 					<th scope="col" class="text-right"> </th>
 				</tr>
 			</thead>
+			<!-- Carrega os dados no corpo da tabela -->
 			<tbody>
 				<?php
 					include 'crud/os_select.php';
