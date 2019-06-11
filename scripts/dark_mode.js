@@ -41,6 +41,14 @@ function setColorMode(darkMode, page)
         if(tabela != null)
             tabela.className = 'table table-striped table-dark';
 
+        var i = 1;
+        let icone = document.getElementById(`fa_icon_${i}`);
+        while(icone != null)
+        {
+            icone.className = 'btn btn-lg text-light shadow-none';
+            icone = document.getElementById(`fa_icon_${++i}`);
+        }
+
         let element2 = document.getElementById(`img_${page}`);
         if(element2 != null)
             element2.src = `/img/${page}.png`
@@ -55,6 +63,14 @@ function setColorMode(darkMode, page)
         let tabela = document.getElementById('tabela');
         if(tabela != null)
             tabela.className = 'table table-striped';
+
+        var i = 1;
+        let icone = document.getElementById(`fa_icon_${i}`);
+        while(icone != null)
+        {
+            icone.className = 'btn btn-lg text-dark shadow-none';
+            icone = document.getElementById(`fa_icon_${++i}`);
+        }
 
         let element2 = document.getElementById(`img_${page}`);
         if(element2 != null)

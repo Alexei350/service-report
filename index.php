@@ -59,6 +59,10 @@
 					<li class="nav-item" id="nav_relatorios">
 						<a class="nav-link" href="/relatorios">Relatórios</a>
 					</li>
+
+					<li class="nav-item" id="nav_about">
+						<a class="nav-link" href="/sobre">Sobre os Criadores</a>
+					</li>
 				</ul>
 
 				<?php

@@ -1,6 +1,3 @@
-<!-- CSS específico da página -->
-<link href="cover.css" rel="stylesheet">
-
 <div class='row justify-content-md-center'>
     <div class='col-lg-5'>
         <div class='py-5 text-center'>
