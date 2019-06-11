@@ -20,9 +20,8 @@
 <div class="row justify-content-md-center">
 	<div class="col-md-6 align-self-start">
 		<div class="py-5 text-center">
-			<img class="d-block mx-auto mb-4" id="img_os" src="/img/os.png" alt="" width="72" height="72">
-			<h2>Cadastro de Ordens de Serviço</h2>
-			<p class="lead">Forneça os dados do cliente, descrição dos serviços e informações para adicionar a ordem de serviço.</p>
+			<img class="d-block mx-auto mb-4" id="img_os" src="/img/os.png" alt="ordens de serviço" width="72" height="72">
+			<h1 class="cover-heading">Cadastro de Ordens de Serviço</h2>
 		</div>
 
 		<h4 class="mb-3">Dados do cliente</h4>
@@ -158,7 +157,7 @@
 			</div>
 
 			<hr class="mb-4">
-			
+
 			<button class="btn text-primary btn-lg shadow-none" id="bottom_element" type="submit"><i class='far fa-save'></i> Salvar</button>
 			<button class="btn text-danger btn-lg shadow-none" id="bottom_element" onclick="goBack()"><i class='fas fa-ban'></i> Cancelar</button>
 		</form>
