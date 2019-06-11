@@ -5,7 +5,7 @@
     $res = $connection->query("SELECT DATE_FORMAT(os.data, '%M') AS mes
                                     , DATE_FORMAT(os.data, '%Y') AS ano
                                     , SUM(os.tempo) AS temp
-                                    , SUM(os.valor) AS val 
+                                    , REPLACE(SUM(os.valor), '.', ',') AS val 
                                     , COUNT(os.id) as qtd
                                     , COUNT(DISTINCT(os.data)) as dias
                                     

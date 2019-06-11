@@ -29,10 +29,10 @@
 									<td><strong>{$row['ID_os']}</strong></td>
 									<td>{$row['nome']} {$row['sobrenome']}</td>
 									<td>{$row['servico']}</td>
-									<td>{$row['data']}</td>
+									<td>{$row['dta']}</td>
 									<td>{$row['hra']}</td>
 									<td>{$row['tempo']}h</td>
-									<td class='text-right'>R$ {$row['valor']}</td>
+									<td class='text-right'>R$ {$row['val']}</td>
 									<td class='text-right'>
 										<a role='button' href='os/{$row['ID_os']}' class='btn btn-sm text-primary shadow-none'><i class='fa fa-edit'></i></a>
 										<a role='button' href='../crud/os_delete.php?ref=pesquisar&id={$row['ID_os']}'class='btn btn-sm text-danger shadow-none'><i class='fa fa-trash'></i></button>

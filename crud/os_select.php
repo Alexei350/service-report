@@ -5,7 +5,9 @@
 
         $res = $connection->query("SELECT *
                                          , os.ID as ID_os
+                                         , DATE_FORMAT(data, '%d/%m/%Y') as dta
                                          , TIME_FORMAT(hora, '%H:%i') as hra
+                                         , REPLACE(valor, '.', ',') as val
                              
                                       FROM report_os as os 
                                      
