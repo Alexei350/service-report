@@ -11,6 +11,8 @@
 					<th scope="col">Mês</th>
 					<th scope="col">Ano</th>
 					<th scope="col">Serviços Prestados</th>
+					<th scope="col">Dias Trabalhados</th>
+					<th scope="col">Frequência Média</th>
 					<th scope="col">Tempo trabalhado</th>
 					<th scope="col">Total de ganhos</th>
 				</tr>
@@ -25,6 +27,8 @@
 									<td>" . ucfirst($row['mes']) . "</td>
 									<td>{$row['ano']}</td>
 									<td>{$row['qtd']}</td>
+									<td>{$row['dias']}</td>
+									<td>" . round($row['temp']/$row['dias'], 2) . "h/dia</td>
 									<td>{$row['temp']}h</td>
 									<td>R$ {$row['val']}</td>
 								</tr>";

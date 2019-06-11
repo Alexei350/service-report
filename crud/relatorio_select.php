@@ -7,6 +7,7 @@
                                     , SUM(os.tempo) AS temp
                                     , SUM(os.valor) AS val 
                                     , COUNT(os.id) as qtd
+                                    , COUNT(DISTINCT(os.data)) as dias
                                     
                                 FROM report_os AS os 
                                 
