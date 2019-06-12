@@ -23,9 +23,19 @@
 	  	<link rel="stylesheet" href="/utilities/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="/utilities/font_awesome/css/all.css">
 
+		<!--Javascript para o bootstrap-->
+		<script src="/utilities/ajax-popper.min.js"></script>
+		<script src="/utilities/jquery-3.3.1.slim.min.js"></script>
+		<script src="/utilities/bootstrap/js/bootstrap.min.js"></script>
+
 		<!--Javascript da tela-->
 		<script src="/scripts/nav.js"></script>
 		<script src="/scripts/dark_mode.js"></script>
+
+		<!--Javascript para o bootstrap-->
+		<script src="/utilities/ajax-popper.min.js"></script>
+		<script src="/utilities/jquery-3.3.1.slim.min.js"></script>
+		<script src="/utilities/bootstrap/js/bootstrap.min.js"></script>
 		
 		<!--CSS global das telas-->
 		<link rel="stylesheet" href="/styles/global.css">
@@ -113,10 +123,5 @@
 				</script>
 			</div>
 		</div>
-
-		<!--Javascript para o bootstrap-->
-		<script src="/utilities/ajax-popper.min.js"></script>
-		<script src="/utilities/jquery-3.3.1.slim.min.js"></script>
-		<script src="/utilities/bootstrap/js/bootstrap.min.js"></script>
 	</body>
 </html>
