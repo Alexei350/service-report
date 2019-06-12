@@ -49,7 +49,7 @@
 
 			<div class="mb-3">
 				<label for="email">Email <span class="text-muted">(Opcional)</span></label>
-				<input type="email" class="form-control" id="email" name="email" placeholder="Ex: usuario@dominio.com" value="<?=$reg['email']?>">
+				<input type="email" class="form-control" id="email" name="email" placeholder="" value="<?=$reg['email']?>">
 			</div>
 
 			<div class="row">
@@ -84,7 +84,7 @@
 			<div class="row">
 				<div class="col-md-8 mb-3">
 					<label for="rua">Logradouro</label>
-					<input type="text" class="form-control" id="rua" name="logradouro" placeholder="Ex: Av. Brasil" value="<?=$reg['logradouro']?>" required>
+					<input type="text" class="form-control" id="rua" name="logradouro" placeholder="" value="<?=$reg['logradouro']?>" required>
 
 					<div class="invalid-feedback">
 						Por favor insira o endereço.

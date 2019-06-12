@@ -100,7 +100,7 @@
 				<!--Chama a tela selecionada-->
 				<?php
 					//Se passar o nome da página por get acessa a página referida, senão acessa a página de boas-vindas, se não for logado vai pra tela de login
-					if(file_exists("paginas/{$_GET['pagina']}.php") && !ISSET($_SESSION['nome']) && $_GET['pagina'] != 'login' && $_GET['pagina'] != 'register')
+					if(file_exists("paginas/{$_GET['pagina']}.php") && !ISSET($_SESSION['nome']) && $_GET['pagina'] != 'login' && $_GET['pagina'] != 'register' && $_GET['pagina'] != 'about')
 						header('location:/login');
 						
 					include 'paginas/' . $id . '.php';

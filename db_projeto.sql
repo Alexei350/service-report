@@ -1,6 +1,6 @@
 -- --------------------------------------------------------
 -- Servidor:                     127.0.0.1
--- Versão do servidor:           5.5.62 - MySQL Community Server (GPL)
+-- Versão do servidor:           10.1.38-MariaDB - mariadb.org binary distribution
 -- OS do Servidor:               Win64
 -- HeidiSQL Versão:              10.1.0.5464
 -- --------------------------------------------------------
@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `report_cliente` (
   `logradouro` varchar(50) NOT NULL,
   `numero` varchar(50) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=latin1;
 
 -- Exportação de dados foi desmarcado.
 -- Copiando estrutura para tabela projeto.report_os
@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `report_os` (
   PRIMARY KEY (`ID`),
   KEY `FK_report_os_report_cliente` (`ID_cliente`),
   CONSTRAINT `FK_report_os_report_cliente` FOREIGN KEY (`ID_cliente`) REFERENCES `report_cliente` (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=latin1;
 
 -- Exportação de dados foi desmarcado.
 -- Copiando estrutura para tabela projeto.usuario
@@ -59,13 +59,13 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `email` varchar(50) NOT NULL,
   `senha` char(32) NOT NULL,
   `empresa` varchar(50) NOT NULL,
-  `endereco` varchar(50) NOT NULL,
+  `logradouro` varchar(50) NOT NULL,
+  `numero` int(11) NOT NULL,
   `cpfcnpj` varchar(50) NOT NULL,
-  `pais` varchar(50) NOT NULL,
   `estado` varchar(50) NOT NULL,
   `cep` varchar(50) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 -- Exportação de dados foi desmarcado.
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

@@ -1,6 +1,6 @@
 -- --------------------------------------------------------
 -- Servidor:                     127.0.0.1
--- Versão do servidor:           5.5.62 - MySQL Community Server (GPL)
+-- Versão do servidor:           10.1.38-MariaDB - mariadb.org binary distribution
 -- OS do Servidor:               Win64
 -- HeidiSQL Versão:              10.1.0.5464
 -- --------------------------------------------------------
@@ -150,13 +150,6 @@ INSERT INTO `report_os` (`ID`, `ID_cliente`, `servico`, `tempo`, `valor`, `data`
 	(99, 1, 'Instalação de Gerador', 20, 694.73, '2019-01-01', '08:24:00', 'mauris. Integer sem elit, pharetra ut, pharetra sed, hendrerit a,'),
 	(100, 23, 'Instalação Elétrica', 38, 920.90, '2019-02-15', '01:14:00', 'commodo hendrerit. Donec porttitor tellus non magna. Nam ligula elit,');
 /*!40000 ALTER TABLE `report_os` ENABLE KEYS */;
-
--- Copiando dados para a tabela projeto.usuario: ~2 rows (aproximadamente)
-/*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` (`ID`, `nome`, `sobrenome`, `email`, `senha`, `empresa`, `endereco`, `cpfcnpj`, `pais`, `estado`, `cep`) VALUES
-	(1, 'Alexei', '', 'alexei@imediata.com.br', '698dc19d489c4e4db73e28a713eab07b', '', '', '', '', '', ''),
-	(5, 'José', 'Roberto', 'alexeisecretti@gmail.com', 'e8d95a51f3af4a3b134bf6bb680a213a', 'Imediata', 'Rua dos bobos', '4565464213', 'Brasil', 'Acre', '97250000');
-/*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;

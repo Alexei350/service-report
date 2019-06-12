@@ -28,7 +28,7 @@
 									<td>{$row['ano']}</td>
 									<td>{$row['qtd']}</td>
 									<td>{$row['dias']}</td>
-									<td>" . round($row['temp']/$row['dias'], 2) . "h/dia</td>
+									<td>" . str_replace('.', ',', round($row['temp']/$row['dias'], 1)) . "h/dia</td>
 									<td>{$row['temp']}h</td>
 									<td>R$ {$row['val']}</td>
 								</tr>";

@@ -11,9 +11,9 @@
                  , email
                  , senha
                  , empresa
-                 , endereco
+                 , logradouro
+                 , numero
                  , cpfcnpj
-                 , pais
                  , estado
                  , cep)
                  
@@ -22,9 +22,9 @@
                  , '{$_POST['email']}'
                  , '{$senha}'
                  , '{$_POST['empresa']}'
-                 , '{$_POST['endereco']}'
+                 , '{$_POST['logradouro']}'
+                 , '{$_POST['numero']}'
                  , '{$_POST['cpfcnpj']}'
-                 , '{$_POST['pais']}'
                  , '{$_POST['estado']}'
                  , '{$_POST['cep']}')";
 
