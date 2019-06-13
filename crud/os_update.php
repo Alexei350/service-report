@@ -1,5 +1,6 @@
 <?php
     include '../connection/config.php';
+    session_start();
 
     $sql = "UPDATE report_os 
     
@@ -10,7 +11,8 @@
                  , hora = '{$_POST['hora']}'
                  , descricao = '{$_POST['descricao']}'
                  
-             WHERE ID = '{$_GET['id']}'";
+             WHERE ID = '{$_GET['id']}'
+               AND ID_usuario = '{$_SESSION['ID']}'";
 
     $connection->query($sql);
 
@@ -21,7 +23,9 @@
         INNER JOIN report_os AS os
                 ON os.ID_cliente = cliente.id
                 
-             WHERE os.ID = '{$_GET['id']}'";
+             WHERE os.ID = '{$_GET['id']}'
+               AND os.ID_usuario = '{$_SESSION['ID']}'
+               AND cliente.ID_usuario = '{$_SESSION['ID']}'";
 
     $res = $connection->query($sql);
     $cliente = $res->fetch_assoc();
@@ -37,9 +41,9 @@
                  , logradouro = '{$_POST['logradouro']}'
                  , numero = '{$_POST['numero']}'
                  
-             WHERE ID = '{$cliente['clienteID']}'";
+			 WHERE ID = '{$cliente['clienteID']}'
+			   AND ID_usuario = '{$_SESSION['ID']}'";
 
     $connection->query($sql);
 
     header('location:/pesquisar');
-?>

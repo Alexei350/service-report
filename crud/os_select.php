@@ -2,6 +2,7 @@
     function SelectTable()
     {
         include 'connection/config.php';
+        session_start();
 
         $res = $connection->query("SELECT *
                                          , os.ID as ID_os
@@ -12,7 +13,10 @@
                                       FROM report_os as os 
                                      
                                 INNER JOIN report_cliente as cliente 
-                                        ON os.ID_cliente = cliente.ID 
+                                        ON os.ID_cliente = cliente.ID
+
+                                     WHERE os.ID_usuario = '{$_SESSION['ID']}'
+                                       AND cliente.ID_usuario = '{$_SESSION['ID']}'
                                              
                                   ORDER BY data DESC");
 
@@ -31,7 +35,9 @@
                                INNER JOIN report_cliente as cliente 
                                        ON os.ID_cliente = cliente.ID 
                                             
-                                    WHERE os.ID = {$id}");
+                                    WHERE os.ID = '{$id}'
+                                      AND os.ID_usuario = '{$_SESSION['ID']}'
+                                      AND cliente.ID_usuario = '{$_SESSION['ID']}'");
 
         return $res;
     }

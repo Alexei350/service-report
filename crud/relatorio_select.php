@@ -1,5 +1,6 @@
 <?php
     include 'connection/config.php';
+    session_start();
 
     $res = $connection->query("SET lc_time_names = 'pt_BR';");
     $res = $connection->query("SELECT DATE_FORMAT(os.data, '%M') AS mes
@@ -13,8 +14,10 @@
                                 
                           INNER JOIN report_cliente AS cliente 
                                   ON os.ID_cliente = cliente.id 
+                                
+                               WHERE os.ID_usuario = '{$_SESSION['ID']}'
+                                 AND cliente.ID_usuario = '{$_SESSION['ID']}'
                                     
                             GROUP BY DATE_FORMAT(os.data, '%Y-%m') 
                             
                             ORDER BY DATE_FORMAT(os.data, '%Y-%m') desc");
-?>
