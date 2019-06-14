@@ -5,6 +5,7 @@
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteRule ^os\/([0-9]+)\/?$ index.php?pagina=os&edit=$1 [NC,L]
   RewriteRule ^os/?$ /index.php?pagina=os [NC,L]
+  RewriteRule ^404/?$ /index.php?pagina=404 [NC,L]
   RewriteRule ^login/?$ /index.php?pagina=login [NC,L]
   RewriteRule ^sobre/?$ /index.php?pagina=about [NC,L]
   RewriteRule ^relatorios/?$ /index.php?pagina=relatorios [NC,L]
