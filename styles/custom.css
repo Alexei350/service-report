@@ -1,0 +1,31 @@
+.btn-new 
+{
+	background-color: #8A97FF;
+	color: #FFF!important;
+	border-color: #7484FF;
+}
+
+.btn-new:hover, 
+.btn-new:focus, 
+.btn-new:active, 
+.btn-new.active, 
+.open .dropdown-toggle.btn-new 
+{
+	background-color: #7484FF;
+	color: #FFF!important;
+	border-color: #8A97FF;
+}
+
+.text-new 
+{
+	color: #8A97FF!important;
+}
+
+.text-new:hover, 
+.text-new:focus, 
+.text-new:active, 
+.text-new.active, 
+.open .dropdown-toggle.text-new 
+{
+	color: #7484FF!important;
+}

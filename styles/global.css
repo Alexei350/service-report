@@ -1,25 +1,24 @@
+/* Adiciona uma margen superior no primeiro elemento da tela */
 #top_element
 {
     margin-top: 30px;
 }
 
+/* Adiciona uma margen inferior no último elemento da tela */
 #bottom_element
 {
     margin-bottom: 30px;
 }
 
+/* Remove as mangens do main, porque estava saindo do tamanho da tela */
 #main
 {
     margin-right: 0px;
     margin-left: 0px;
 }
 
+/* Força o modal a ficar com o texto em preto, pois estava sendo afetado pelo modo escuro */
 .modal-dialog
 {
     color: black;
-}
-
-body 
-{
-    background-image: url("/img/background-pattern.png");
 }

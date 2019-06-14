@@ -22,6 +22,7 @@
 		<!--CSS do bootstrap-->
 	  	<link rel="stylesheet" href="/utilities/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="/utilities/font_awesome/css/all.css">
+		<link rel="stylesheet" href="/styles/custom.css">
 
 		<!--Javascript para o bootstrap-->
 		<script src="/utilities/ajax-popper.min.js"></script>
@@ -77,7 +78,7 @@
 					if(ISSET($_SESSION['nome']))
 					{
 						echo "	<div class='nav-item dropdown'>
-									<a role='button' href='/session/sessao_logout.php' id='navbarDropdown' role='button' data-toggle='dropdown' class='btn text-primary shadow-none'>
+									<a role='button' id='navbarDropdown' role='button' data-toggle='dropdown' class='btn text-primary shadow-none'>
 										<i class='fa fa-user'></i> {$_SESSION['nome']}
 									</a>
 									<div class='dropdown-menu dropdown-menu-right' aria-labelledby='navbarDropdown'>
@@ -110,10 +111,17 @@
 				<!--Chama a tela selecionada-->
 				<?php
 					//Se passar o nome da página por get acessa a página referida, senão acessa a página de boas-vindas, se não for logado vai pra tela de login
-					if(file_exists("paginas/{$_GET['pagina']}.php") && !ISSET($_SESSION['nome']) && $_GET['pagina'] != 'login' && $_GET['pagina'] != 'register' && $_GET['pagina'] != 'about')
-						header('location:/login');
+					if(file_exists("paginas/{$id}.php"))
+					{
+						if(!ISSET($_SESSION['nome']) && $id != 'login' && $id != 'register' && $id != 'about' && $id != 'cover')
+							header('location:/login');
 						
-					include 'paginas/' . $id . '.php';
+						include 'paginas/' . $id . '.php';
+					}
+					else
+					{
+						include 'paginas/404.php';
+					}
 				?>
 				
 				<!--Define o ícone de página ativo na navbar-->
