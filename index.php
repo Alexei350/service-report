@@ -31,11 +31,6 @@
 		<!--Javascript da tela-->
 		<script src="/scripts/nav.js"></script>
 		<script src="/scripts/dark_mode.js"></script>
-
-		<!--Javascript para o bootstrap-->
-		<script src="/utilities/ajax-popper.min.js"></script>
-		<script src="/utilities/jquery-3.3.1.slim.min.js"></script>
-		<script src="/utilities/bootstrap/js/bootstrap.min.js"></script>
 		
 		<!--CSS global das telas-->
 		<link rel="stylesheet" href="/styles/global.css">
@@ -81,13 +76,18 @@
 					//Verifica se usuário está logado
 					if(ISSET($_SESSION['nome']))
 					{
-						echo "	<div style='padding-right:10px; color:#FFFFFF'>
-									Olá {$_SESSION['nome']}!
-								</div>
-
-								<a role='button' href='/session/sessao_logout.php' class='btn text-danger shadow-none'>
-									<i class='fas fa-sign-out-alt'></i> Logout
-								</a>";
+						echo "	<div class='nav-item dropdown'>
+									<a role='button' href='/session/sessao_logout.php' id='navbarDropdown' role='button' data-toggle='dropdown' class='btn text-primary shadow-none'>
+										<i class='fa fa-user'></i> {$_SESSION['nome']}
+									</a>
+									<div class='dropdown-menu dropdown-menu-right' aria-labelledby='navbarDropdown'>
+										<a class='dropdown-item' href='#'>Minha conta</a>
+										<div class='dropdown-divider'></div>
+										<a class='btn text-danger shadow-none dropdown-item' href='/session/sessao_logout.php'>
+											<i class='fas fa-sign-out-alt'></i> Logout
+										</a>
+									</div>
+								</div>";
 					}
 					else
 					{
