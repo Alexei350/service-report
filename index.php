@@ -1,15 +1,3 @@
-<?php
-	//define o id para chamar o modo dark
-	if(file_exists("paginas/{$_GET['pagina']}.php"))
-	{
-		$id = $_GET['pagina'];
-	}
-	else
-	{
-		$id = "cover";
-	}
-?>
-
 <!DOCTYPE html>
 <html lang="br">
 	<head>
@@ -110,18 +98,13 @@
 			<div class="col">
 				<!--Chama a tela selecionada-->
 				<?php
+					$id = $_GET['pagina'];
+
 					//Se passar o nome da página por get acessa a página referida, senão acessa a página de boas-vindas, se não for logado vai pra tela de login
-					if(file_exists("paginas/{$id}.php"))
-					{
-						if(!ISSET($_SESSION['nome']) && $id != 'login' && $id != 'register' && $id != 'about' && $id != 'cover')
+					if(file_exists("paginas/{$id}.php") && !ISSET($_SESSION['nome']) && $id != 'login' && $id != 'register' && $id != 'about' && $id != 'cover' && $id != '404')
 							header('location:/login');
 						
-						include 'paginas/' . $id . '.php';
-					}
-					else
-					{
-						include 'paginas/404.php';
-					}
+					include 'paginas/' . $id . '.php';
 				?>
 				
 				<!--Define o ícone de página ativo na navbar-->
