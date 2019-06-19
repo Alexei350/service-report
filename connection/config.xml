@@ -1,8 +1,0 @@
-<?xml version="1.0" standalone="yes"?>
-<config>
-    <host>127.0.0.1</host>
-    <user>sistema</user>
-    <password>10741961</password>
-    <database>projeto</database>
-    <port>3306</port>
-</config>
