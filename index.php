@@ -1,3 +1,7 @@
+<?php 
+	$id = $_GET['pagina'];
+?>
+
 <!DOCTYPE html>
 <html lang="br">
 	<head>
@@ -98,8 +102,6 @@
 			<div class="col">
 				<!--Chama a tela selecionada-->
 				<?php
-					$id = $_GET['pagina'];
-
 					//Se passar o nome da página por get acessa a página referida, senão acessa a página de boas-vindas, se não for logado vai pra tela de login
 					if(file_exists("paginas/{$id}.php") && !ISSET($_SESSION['nome']) && $id != 'login' && $id != 'register' && $id != 'about' && $id != 'cover' && $id != '404')
 							header('location:/login');
