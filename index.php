@@ -1,3 +1,7 @@
+<?php
+	$id = $_GET['pagina'];
+?>
+
 <!DOCTYPE html>
 <html lang="br">
 	<head>
@@ -10,19 +14,27 @@
 		<!--CSS do bootstrap-->
 	  	<link rel="stylesheet" href="/utilities/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="/utilities/font_awesome/css/all.css">
+
+		<!-- CSS do botão customizado para o Bootstrap -->
 		<link rel="stylesheet" href="/styles/custom.css">
 
-		<!--Javascript para o bootstrap-->
+		<!-- CSS do Croppie (Cortar imagens) -->
+		<link rel="stylesheet" href="/utilities/croppie/croppie.css">
+		
+		<!-- CSS global das telas -->
+		<link rel="stylesheet" href="/styles/global.css">
+
+		<!-- Javascript para o bootstrap -->
 		<script src="/utilities/ajax-popper.min.js"></script>
 		<script src="/utilities/jquery-3.3.1.slim.min.js"></script>
 		<script src="/utilities/bootstrap/js/bootstrap.min.js"></script>
 
-		<!--Javascript da tela-->
+		<!-- Javascript do Croppie -->
+		<script src="/utilities/croppie/croppie.js"></script>
+
+		<!-- Javascript da tela -->
 		<script src="/scripts/nav.js"></script>
 		<script src="/scripts/dark_mode.js"></script>
-		
-		<!--CSS global das telas-->
-		<link rel="stylesheet" href="/styles/global.css">
 	</head>
 
 	<body id='body' class="text-center">
@@ -66,15 +78,20 @@
 					if(ISSET($_SESSION['nome']))
 					{
 						echo "	<div class='nav-item dropdown'>
-									<a role='button' id='navbarDropdown' role='button' data-toggle='dropdown' class='btn text-primary shadow-none'>
-										<i class='fa fa-user'></i> {$_SESSION['nome']}
-									</a>
-									<div class='dropdown-menu dropdown-menu-right' aria-labelledby='navbarDropdown'>
-										<a class='dropdown-item' href='#'>Minha conta</a>
+									<button role='button' id='user_btn' role='button' data-toggle='dropdown' class='btn text-primary shadow-none'>
+										<img src='/img/usuario/img_user_{$_SESSION['ID']}.png' class='rounded-circle border border-primary' id='user_img'>{$_SESSION['nome']}
+									</button>
+									<div class='dropdown-menu dropdown-menu-right' aria-labelledby='user_btn'>
+										<button class='btn text-dark dropdown-item' href='#'>
+											<i class='fas fa-cog' id='menu_item'></i>Minha conta
+										</button>
+										<button onclick=\"switchMode('{$id}')\" class='btn text-dark dropdown-item'>
+											<i class='fas fa-adjust' id='menu_item'></i>Modo escuro
+										</button>
 										<div class='dropdown-divider'></div>
-										<a class='btn text-danger shadow-none dropdown-item' href='/session/sessao_logout.php'>
-											<i class='fas fa-sign-out-alt'></i> Logout
-										</a>
+										<button class='btn text-danger shadow-none dropdown-item' href='/session/sessao_logout.php'>
+											<i class='fas fa-sign-out-alt' id='menu_item'></i>Sair
+										</button>
 									</div>
 								</div>";
 					}
@@ -87,9 +104,6 @@
 								</form>";
 					}
 				?>
-
-				<!--Botão do modo escuro-->
-				<button onclick="switchMode('<?= $id ?>')" class="btn text-light shadow-none"><i class='fas fa-adjust'></i></button>
 			</div>
 		</div>
 
@@ -98,8 +112,6 @@
 			<div class="col">
 				<!--Chama a tela selecionada-->
 				<?php
-					$id = $_GET['pagina'];
-
 					//Se passar o nome da página por get acessa a página referida, senão acessa a página de boas-vindas, se não for logado vai pra tela de login
 					if(file_exists("paginas/{$id}.php") && !ISSET($_SESSION['nome']) && $id != 'login' && $id != 'register' && $id != 'about' && $id != 'cover' && $id != '404')
 							header('location:/login');

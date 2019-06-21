@@ -7,6 +7,52 @@
             <!-- Título -->
             <h1 class='cover-heading'>OS Report</h1>
             <!-- Apresentação -->
+
+            <!-- <img class="my-image" src="/img/usuario/img_user_1.png" />
+            <script>
+                var basic = $('.my-image').croppie({
+                    viewport: {
+                        width: 150,
+                        height: 200
+                    }
+                });
+                basic.croppie('bind', {
+                    url: 'demo/cat.jpg',
+                    points: [77,469,280,739]
+                });
+                //on button click
+                basic.croppie('result', 'html').then(function(html) {
+                    // html is div (overflow hidden)
+                    // with img positioned inside.
+                });
+            </script> -->
+
+                <div id="demo-basic">
+                </div>
+            <style>
+                #demo-basic {
+                    width: 250px;
+                    height: 250px;
+                }
+            </style>
+
+            <script>
+                $(function() {
+                    var basic = $('#demo-basic').croppie({
+                        viewport: 
+                        {
+                            width: 250,
+                            height: 250,
+                            type: 'circle'
+                        }
+                    });
+                    basic.croppie('bind', {
+                        url: '/img/usuario/img_user_1.png',
+                        points: [77, 469, 280, 739]
+                    });
+                });
+            </script>
+
             <p class='lead'>
                 O OS Report é um sistema web de gerenciamento<br>
                 de ordens de serviço e geração de relatórios.

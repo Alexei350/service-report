@@ -17,6 +17,25 @@
     margin-left: 0px;
 }
 
+#user_img
+{
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+}
+
+#user_btn
+{
+    padding-top: 0px; 
+    padding-bottom: 0px; 
+    align-content: center;
+}
+
+#meun_item
+{
+    margin-right: 10px;
+}
+
 /* Força o modal a ficar com o texto em preto, pois estava sendo afetado pelo modo escuro */
 .modal-dialog
 {
