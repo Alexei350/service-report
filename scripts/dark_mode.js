@@ -34,7 +34,7 @@ function setColorMode(darkMode, page)
 
     if(darkMode == 1)
     {
-        element.style.background = 'url("/img/background-pattern-dark.png")';
+        element.style.background = 'url("/img/background/background-pattern-dark.png")';
         element.style.color = 'white';
 
         let tabela = document.getElementById('tabela');
@@ -51,13 +51,13 @@ function setColorMode(darkMode, page)
 
         let element2 = document.getElementById(`img_${page}`);
         if(element2 != null)
-            element2.src = `/img/${page}.png`
+            element2.src = `/img/paginas/${page}.png`
     }
     else
     {
         darkMode = 0;
 
-        element.style.background = `url("/img/background-pattern.png")`;
+        element.style.background = `url("/img/background/background-pattern.png")`;
         element.style.color = 'black';
 
         let tabela = document.getElementById('tabela');
@@ -74,6 +74,6 @@ function setColorMode(darkMode, page)
 
         let element2 = document.getElementById(`img_${page}`);
         if(element2 != null)
-            element2.src = `/img/${page}-dark.png`
+            element2.src = `/img/paginas/${page}-dark.png`
     }
 }

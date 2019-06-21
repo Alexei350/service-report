@@ -1,3 +1,11 @@
+<?php
+	$img = file_exists("img/usuarios/img_user_{$_SESSION['ID']}.png") ? $_SESSION['ID'] : "default";
+?>
+
+<link rel="stylesheet" href="/styles/register.css">
+
+<script src="/scripts/upload_img.js"></script>
+
 <script src="/scripts/go_back.js"></script>
 <script src="/scripts/busca_cep.js"></script>
 <script src="/scripts/valida_form.js"></script>
@@ -5,7 +13,29 @@
 <div class="row justify-content-md-center">
 	<div class="col-lg-6">
 		<h4 class="mb-3" id="top_element">Dados pessoais</h4>
-		<form class="needs-validation" action="crud/usuario_insert.php" method="post" novalidate>
+		<form class="needs-validation" id="form" action="crud/usuario_insert.php" method="post" novalidate>
+			<div class="row justify-content-md-center">
+				<div id="preview_usuario">
+				</div>
+				<style>
+					#preview_usuario {
+						width: 250px;
+						height: 250px;
+						margin-top: 30px;
+						margin-bottom: 65px;
+					}
+				</style>
+			</div>
+			<div class="row justify-content-md-center">
+				<a class="btn text-primary" id="btn_upload">
+					<label for="upload"><i class="fas fa-file-upload"></i> Nova Foto</label>
+					<input type="file" id="upload" value="Escolha uma imagem" accept="image/*" />
+				</a>
+				<input type="hidden" id="imagebase64" name="imagebase64">
+				<a class="btn text-primary upload-result">
+					<i class="fas fa-save"></i> Salvar
+				</a>
+			</div>
 			<div class="row">
 				<div class="col-md-6 mb-3">
 					<label for="nome">Nome</label>
@@ -119,3 +149,7 @@
 		</form>
 	</div>
 </div>
+
+<script>
+	demoUpload(<?= $img ?>);
+</script>

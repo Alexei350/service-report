@@ -1,5 +1,8 @@
 <?php 
+	session_start();
+
 	$id = $_GET['pagina'];
+	$img = file_exists("img/usuarios/img_user_{$_SESSION['ID']}.png") ? $_SESSION['ID'] : "default";
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +12,7 @@
 	  	<meta charset="UTF-8">
 
 		<!--Ícone da página-->
-	  	<link rel="shortcut icon" href="/img/logo-dark.png">
+	  	<link rel="shortcut icon" href="/img/logo/logo-dark.png">
 		  
 		<!--CSS do bootstrap-->
 	  	<link rel="stylesheet" href="/utilities/bootstrap/css/bootstrap.min.css">
@@ -41,7 +44,7 @@
 		<!--Barra de navegação-->
 		<div class="navbar navbar-expand sticky-top navbar-dark" style="background-color: #1f2833">
 			<a class="navbar-brand" href="/">
-				<img src="/img/logo.png" width="30" height="30" alt="Logo">
+				<img src="/img/logo/logo.png" width="30" height="30" alt="Logo">
 			</a>
 
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,27 +74,25 @@
 					</li>
 				</ul>
 
-				<?php
-					session_start();
-					
+				<?php					
 					//Verifica se usuário está logado
 					if(ISSET($_SESSION['nome']))
 					{
 						echo "	<div class='nav-item dropdown'>
 									<button role='button' id='user_btn' role='button' data-toggle='dropdown' class='btn text-primary shadow-none'>
-										<img src='/img/usuario/img_user_{$_SESSION['ID']}.png' class='rounded-circle border border-primary' id='user_img'>{$_SESSION['nome']}
+										<img src='/img/usuarios/img_user_{$img}.png' class='rounded-circle border border-primary' id='user_img'>{$_SESSION['nome']}
 									</button>
 									<div class='dropdown-menu dropdown-menu-right' aria-labelledby='user_btn'>
-										<button class='btn text-dark dropdown-item' href='#'>
+										<a class='btn text-dark dropdown-item' href='/register'>
 											<i class='fas fa-cog' id='menu_item'></i>Minha conta
-										</button>
+										</a>
 										<button onclick=\"switchMode('{$id}')\" class='btn text-dark dropdown-item'>
 											<i class='fas fa-adjust' id='menu_item'></i>Modo escuro
 										</button>
 										<div class='dropdown-divider'></div>
-										<button class='btn text-danger shadow-none dropdown-item' href='/session/sessao_logout.php'>
+										<a class='btn text-danger shadow-none dropdown-item' href='/session/sessao_logout.php'>
 											<i class='fas fa-sign-out-alt' id='menu_item'></i>Sair
-										</button>
+										</a>
 									</div>
 								</div>";
 					}

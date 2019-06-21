@@ -31,9 +31,9 @@
     align-content: center;
 }
 
-#meun_item
+#menu_item
 {
-    margin-right: 10px;
+    margin-right: 8px;
 }
 
 /* Força o modal a ficar com o texto em preto, pois estava sendo afetado pelo modo escuro */

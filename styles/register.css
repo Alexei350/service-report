@@ -1,0 +1,28 @@
+#btn_upload
+{
+    margin-bottom: 25px;
+}
+
+#btn_salvar
+{
+    margin-bottom: 25px;
+}
+
+input[type=range]::-moz-range-track {
+    background: #fff;
+}
+
+/* Muda a cor do botão do slider (não utilizado no momento) */
+/* input[type=range]::-moz-range-thumb {
+    background: #aaa;
+} */
+
+input[type='file'] 
+{
+    display: none
+}
+
+label
+{
+    margin-bottom: 0px;
+}
