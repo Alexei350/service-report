@@ -4,7 +4,7 @@ Projeto simples para um trabalho da disciplina de Linguagens de Programação We
 
 # Configuração
 
-1. Primeiramente acesse a pasta `database` e rode o arquivo `dbprojeto.sql` para criar o banco de dados.
+1. Primeiramente acesse a pasta `database` e rode o arquivo `db_projeto.sql` para criar o banco de dados.
 
 1. Após isto acesse a pasta `connection` e crie um arquivo com a estrutura abaixo, inserindo dentro das tags as respectivas configurações do servidor que contém o banco de dados criado: 
 
