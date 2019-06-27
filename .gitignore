@@ -1,4 +1,5 @@
 #Ignore other folders
-Exercicios/
+.vscode/
 Navegacao/
+Exercicios/
 connection/config.xml
