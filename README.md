@@ -6,7 +6,7 @@ Projeto simples para um trabalho da disciplina de Linguagens de Programação We
 
 1. Primeiramente acesse a pasta `database` e rode o arquivo `db_projeto.sql` para criar o banco de dados.
 
-1. Após isto acesse a pasta `connection` e crie um arquivo com a estrutura abaixo, inserindo dentro das tags as respectivas configurações do servidor que contém o banco de dados criado: 
+2. Após isto acesse a pasta `connection` e crie um arquivo com a estrutura abaixo, inserindo dentro das tags as respectivas configurações do servidor que contém o banco de dados criado: 
 
 ```
 <?xml version="1.0" standalone="yes"?>
@@ -19,7 +19,7 @@ Projeto simples para um trabalho da disciplina de Linguagens de Programação We
 </config>
 ```
 
-1. (Opcional) Crie uma pasta `.vscode` e dentro dela crie um arquivo `setting.json` para que determinados arquivos e pastas não sejam mostrados no Visual Studio Code. Exemplo:
+3. (Opcional) Crie uma pasta `.vscode` e dentro dela crie um arquivo `setting.json` para que determinados arquivos e pastas não sejam mostrados no Visual Studio Code. Exemplo:
 
 ```
 {
