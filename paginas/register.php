@@ -96,7 +96,7 @@
 			<div class="row">
 				<div class="col-md-4 mb-3">
 					<label for="cep" ´>CEP</label>
-					<input type="text" class="form-control" id="cep" name="cep" placeholder="" value="<?=$reg['cep']?>" onblur="pesquisacep(this.value);" required>
+					<input type="text" class="form-control" id="cep" name="cep" placeholder="" value="<?= ISSET($reg) ? $reg['cep'] : ''?>" onblur="pesquisacep(this.value);" required>
 
 					<div class="invalid-feedback">
 						Insira um CEP válido.
@@ -105,7 +105,7 @@
 
 				<div class="col-md-4 mb-3">
 					<label for="cidade">Cidade</label>
-					<input type="text" class="form-control" id="cidade" name="cidade" placeholder="" value="<?=$reg['cidade']?>" required>
+					<input type="text" class="form-control" id="cidade" name="cidade" placeholder="" value="<?= ISSET($reg) ? $reg['cidade'] : ''?>" required>
 
 					<div class="invalid-feedback">
 						Por favor informe um bairro válido.
@@ -114,7 +114,7 @@
 
 				<div class="col-md-4 mb-3">
 					<label for="estado">Estado</label>
-					<input type="text" class="form-control" id="estado" name="estado" placeholder="" value="<?=$reg['estado']?>" required>
+					<input type="text" class="form-control" id="estado" name="estado" placeholder="" value="<?= ISSET($reg) ? $reg['estado'] : ''?>" required>
 
 					<div class="invalid-feedback">
 						Por favor selecione um estado válido.
@@ -125,7 +125,7 @@
 			<div class="row">
 				<div class="col-md-8 mb-3">
 					<label for="rua">Logradouro</label>
-					<input type="text" class="form-control" id="rua" name="logradouro" placeholder="" value="<?=$reg['logradouro']?>" required>
+					<input type="text" class="form-control" id="rua" name="logradouro" placeholder="" value="<?= ISSET($reg) ? $reg['logradouro'] : ''?>" required>
 
 					<div class="invalid-feedback">
 						Por favor insira o endereço.
@@ -134,7 +134,7 @@
 
 				<div class="col-md-4 mb-3">
 					<label for="numero">Número</label>
-					<input type="text" class="form-control" id="numero" name="numero" placeholder="" value="<?=$reg['numero']?>" required>
+					<input type="text" class="form-control" id="numero" name="numero" placeholder="" value="<?= ISSET($reg) ? $reg['numero'] : ''?>" required>
 
 					<div class="invalid-feedback">
 						Por favor informe um número válido.
