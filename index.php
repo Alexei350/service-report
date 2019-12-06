@@ -2,7 +2,7 @@
 	session_start();
 
 	$id = $_GET['pagina'];
-	$img = file_exists("img/usuarios/img_user_{$_SESSION['ID']}.png") ? $_SESSION['ID'] : "default";
+	$img = (ISSET($_SESSION['ID']) && file_exists("img/usuarios/img_user_{$_SESSION['ID']}.png")) ? $_SESSION['ID'] : "default";
 ?>
 
 <!DOCTYPE html>
