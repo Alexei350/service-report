@@ -2,7 +2,11 @@
     function SelectTable()
     {
         include 'connection/config.php';
-        session_start();
+
+        if (session_status() == PHP_SESSION_NONE) 
+        {
+            session_start();
+        }
 
         $res = $connection->query("SELECT *
                                          , os.ID as ID_os

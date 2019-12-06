@@ -1,6 +1,10 @@
 <?php
     include 'connection/config.php';
-    session_start();
+
+    if (session_status() == PHP_SESSION_NONE) 
+    {
+        session_start();
+    }
 
     $res = $connection->query("SET lc_time_names = 'pt_BR';");
     $res = $connection->query("SELECT DATE_FORMAT(os.data, '%M') AS mes
