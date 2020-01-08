@@ -1,6 +1,8 @@
-# LPWeb1
+# Service Report
 
-Projeto simples para um trabalho da disciplina de Linguagens de Programação Web desenvolvido usando PHP e framework Bootstrap
+Sistema Web de gerenciamento para prestação de serviços.
+
+Projeto criado para a disciplina de Linguagem de Programação Web, desenvolvido usando PHP, e utilizando o Framework Bootstrap.
 
 # Configuração
 
@@ -19,7 +21,7 @@ Projeto simples para um trabalho da disciplina de Linguagens de Programação We
 </config>
 ```
 
-3. (Opcional) Crie uma pasta `.vscode` e dentro dela crie um arquivo `setting.json` para que determinados arquivos e pastas não sejam mostrados no Visual Studio Code. Exemplo:
+3. (Opcional) Para filtra as pastas e arquivos mostrados dentro do Visual Studio Code, crie uma pasta `.vscode` e dentro dela crie um arquivo `setting.json` com a seguinte estrutura, definindo o padrão de pastas e arquivos a serem ocultados. Exemplo:
 
 ```
 {
