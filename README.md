@@ -21,7 +21,14 @@ Projeto criado para a disciplina de Linguagem de Programação Web, desenvolvido
 </config>
 ```
 
-3. (Opcional) Para filtra as pastas e arquivos mostrados dentro do Visual Studio Code, crie uma pasta `.vscode` e dentro dela crie um arquivo `setting.json` com a seguinte estrutura, definindo o padrão de pastas e arquivos a serem ocultados. Exemplo:
+3. Para rodar em produção, no servidor, recomendo alterar o arquivo `.htaccess` e adicionar as seguintes linhas no início do arquivo (estas linhas servem para redirecionar todas as requisições HTTP para HTTPS, forçando a conexão segura):
+```
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+```
+
+4. (Opcional) Para filtra as pastas e arquivos mostrados dentro do Visual Studio Code, crie uma pasta `.vscode` e dentro dela crie um arquivo `setting.json` com a seguinte estrutura, definindo o padrão de pastas e arquivos a serem ocultados. Exemplo:
 
 ```
 {
